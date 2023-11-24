@@ -1,31 +1,6 @@
-# Compiled files
-*.js
-*.js.map
-
-# Dependency directories
-node_modules/
-dist/
-
-# Environment variables file
-.env
-
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# C extensions
-*.so
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-
-# Python Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# macOS system files
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
 .DS_Store
