@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  PentagonS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: pentagon-s3-bucket
+      AccessControl: Private
+      Tags:
+        - Key: project
+          Value: pentagon
