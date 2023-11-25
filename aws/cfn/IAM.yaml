@@ -83,6 +83,25 @@ Resources:
                 Action:
                   - "apigateway:*"
                 Resource: "*"
+  
+  PentagonLambdaExecutionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: S3FullAccessPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: 's3:*'
+                Resource: 'arn:aws:s3:::pentagon-s3-bucket/*'
 
   PentagonGuestIAMUser1:
     Type: "AWS::IAM::User"
