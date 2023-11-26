@@ -60,6 +60,7 @@
   "dependencies": {
     "@types/request": "^2.48.12",
     "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
     "request": "^2.88.2"
   }
 }
