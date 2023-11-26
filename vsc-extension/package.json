@@ -2,7 +2,7 @@
   "name": "pentagon",
   "displayName": "pentagon",
   "description": "",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "icon": "img/logo@3x.png",
   "engines": {
     "vscode": "^1.84.0"
