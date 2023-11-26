@@ -124,6 +124,7 @@ Resources:
           - Effect: "Allow"
             Action:
               - "iam:PassRole"
+              - "s3:ListAllMyBuckets"
             Resource:
               - !GetAtt PentagonLambdaRole.Arn
               - !GetAtt PentagonS3Role.Arn
@@ -142,6 +143,7 @@ Resources:
           - Effect: "Allow"
             Action:
               - "iam:PassRole"
+              - "s3:ListAllMyBuckets"
             Resource:
               - !GetAtt PentagonLambdaRole.Arn
               - !GetAtt PentagonS3Role.Arn
@@ -160,6 +162,7 @@ Resources:
           - Effect: "Allow"
             Action:
               - "iam:PassRole"
+              - "s3:ListAllMyBuckets"
             Resource:
               - !GetAtt PentagonLambdaRole.Arn
               - !GetAtt PentagonS3Role.Arn
