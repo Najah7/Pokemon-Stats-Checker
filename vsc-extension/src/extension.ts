@@ -5,10 +5,14 @@ import { f } from './function';
 import { start, startTime } from './start';
 import { post } from './post';
 import { get } from './get';
+import { auth, userName } from './auth';
 
 export function activate(context: vscode.ExtensionContext) {
 	// デバッグ
 	console.log('activate');
+
+	// Githubでログイン
+	auth();
 
 	// 変数定義
 	var previousText: string = "";
