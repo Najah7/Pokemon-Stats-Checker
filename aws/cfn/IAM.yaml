@@ -1,89 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Resources:
-  PentagonLambdaRole:
-    Type: "AWS::IAM::Role"
-    Properties:
-      RoleName: "PentagonLambdaRole"
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: "Allow"
-            Principal:
-              Service: "lambda.amazonaws.com"
-            Action: "sts:AssumeRole"
-      Policies:
-        - PolicyName: "PentagonLambdaPolicy"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: "Allow"
-                Action:
-                  - "lambda:*"
-                Resource: "*"
-
-  PentagonS3Role:
-    Type: "AWS::IAM::Role"
-    Properties:
-      RoleName: "PentagonS3Role"
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: "Allow"
-            Principal:
-              Service: "s3.amazonaws.com"
-            Action: "sts:AssumeRole"
-      Policies:
-        - PolicyName: "PentagonS3Policy"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: "Allow"
-                Action:
-                  - "s3:*"
-                Resource: "*"
-
-  PentagonDynamoDBRole:
-    Type: "AWS::IAM::Role"
-    Properties:
-      RoleName: "PentagonDynamoDBRole"
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: "Allow"
-            Principal:
-              Service: "dynamodb.amazonaws.com"
-            Action: "sts:AssumeRole"
-      Policies:
-        - PolicyName: "PentagonDynamoDBPolicy"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: "Allow"
-                Action:
-                  - "dynamodb:*"
-                Resource: "*"
-
-  PentagonAPIGatewayRole:
-    Type: "AWS::IAM::Role"
-    Properties:
-      RoleName: "PentagonAPIGatewayRole"
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: "Allow"
-            Principal:
-              Service: "apigateway.amazonaws.com"
-            Action: "sts:AssumeRole"
-      Policies:
-        - PolicyName: "PentagonAPIGatewayPolicy"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: "Allow"
-                Action:
-                  - "apigateway:*"
-                Resource: "*"
-  
   PentagonLambdaExecutionRole:
     Type: 'AWS::IAM::Role'
     Properties:
@@ -103,20 +19,38 @@ Resources:
                 Action: 's3:*'
                 Resource: 'arn:aws:s3:::pentagon-s3-bucket/*'
 
+  PentagonGuestUserGroup:
+    Type: "AWS::IAM::Group"
+    Properties:
+      GroupName: "PentagonGuestUserGroup"
+
   PentagonGuestIAMUser1:
     Type: "AWS::IAM::User"
     Properties:
       UserName: "PentagonGuestYudaisugiyama"
+      Groups:
+        - !Ref PentagonGuestUserGroup
 
   PentagonGuestIAMUser2:
     Type: "AWS::IAM::User"
     Properties:
       UserName: "PentagonGuestYusei53"
+      Groups:
+        - !Ref PentagonGuestUserGroup
 
   PentagonGuestIAMUser3:
     Type: "AWS::IAM::User"
     Properties:
       UserName: "PentagonGuestUmaidashi"
+      Groups:
+        - !Ref PentagonGuestUserGroup
+
+  PentagonGuestIAMUser4:
+    Type: "AWS::IAM::User"
+    Properties:
+      UserName: "PentagonGuestNajah"
+      Groups:
+        - !Ref PentagonGuestUserGroup
 
   PentagonGuestUser1AccessKey:
     Type: "AWS::IAM::AccessKey"
@@ -132,60 +66,39 @@ Resources:
     Type: "AWS::IAM::AccessKey"
     Properties:
       UserName: !Ref PentagonGuestIAMUser3
-
-  PentagonGuestUser1Policy:
+  
+  PentagonGuestUser4AccessKey:
+    Type: "AWS::IAM::AccessKey"
+    Properties:
+      UserName: !Ref PentagonGuestIAMUser4
+  
+  PentagonGuestUserPolicy:
     Type: "AWS::IAM::Policy"
     Properties:
-      PolicyName: "PentagonGuestUser1Policy"
+      PolicyName: "PentagonGuestUserPolicy"
       PolicyDocument:
         Version: "2012-10-17"
         Statement:
           - Effect: "Allow"
             Action:
-              - "iam:PassRole"
-              - "s3:ListAllMyBuckets"
-            Resource:
-              - !GetAtt PentagonLambdaRole.Arn
-              - !GetAtt PentagonS3Role.Arn
-              - !GetAtt PentagonDynamoDBRole.Arn
-              - !GetAtt PentagonAPIGatewayRole.Arn
-      Users:
-        - !Ref PentagonGuestIAMUser1
-
-  PentagonGuestUser2Policy:
-    Type: "AWS::IAM::Policy"
-    Properties:
-      PolicyName: "PentagonGuestUser2Policy"
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
+              - "s3:*"
+            Resource: "*"
           - Effect: "Allow"
             Action:
-              - "iam:PassRole"
-              - "s3:ListAllMyBuckets"
-            Resource:
-              - !GetAtt PentagonLambdaRole.Arn
-              - !GetAtt PentagonS3Role.Arn
-              - !GetAtt PentagonDynamoDBRole.Arn
-              - !GetAtt PentagonAPIGatewayRole.Arn
-      Users:
-        - !Ref PentagonGuestIAMUser2
-
-  PentagonGuestUser3Policy:
-    Type: "AWS::IAM::Policy"
-    Properties:
-      PolicyName: "PentagonGuestUser3Policy"
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
+              - "dynamodb:*"
+            Resource: "*"
           - Effect: "Allow"
             Action:
+              - "lambda:*"
+            Resource: "*"
+          - Effect: "Allow"
+            Action:
+              - "apigateway:*"
+            Resource: "*"
+          - Effect: "Allow"
+            Action:
+              - "iam:ListRoles"
               - "iam:PassRole"
-              - "s3:ListAllMyBuckets"
-            Resource:
-              - !GetAtt PentagonLambdaRole.Arn
-              - !GetAtt PentagonS3Role.Arn
-              - !GetAtt PentagonDynamoDBRole.Arn
-              - !GetAtt PentagonAPIGatewayRole.Arn
-      Users:
-        - !Ref PentagonGuestIAMUser3
+            Resource: "*"
+      Groups:
+        - !Ref PentagonGuestUserGroup
