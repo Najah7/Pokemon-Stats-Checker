@@ -12,12 +12,13 @@ const MAX_POKEMON_ID = 151; // 第1世代のポケモンの数が151匹
 
 const fetchPokemons = async () => {
     let pokemonList: Pokemon[] = [];
+    console.log('ポケモンデータを取得中...');
     for (let i = 1; i <= MAX_POKEMON_ID; i++) {
         try {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const pokemonData = response.data;
             const id = pokemonData.id;
-            const name = pokemonData.name;
+            const name = await toJapaneseWithAPICall(pokemonData.species.url);
             const stats = pokemonData.stats.reduce((acc: any, stat: any) => {
                 const statName = stat.stat.name as StatName;
                 acc[statName] = stat.base_stat;
@@ -29,10 +30,20 @@ const fetchPokemons = async () => {
             console.error('[Error] Failed to fetch pokemon data at id:', i);
             console.error(error.message);
         }
-        // NOTE:事前取得なので、安全性を優先して1秒にした。
+        // NOTE:事前取得なので、安全性を優先して0.1秒にした。
         await sleep(100);
+        process.stdout.write('.'); // just for UX
     }
+    process.stdout.write('\n'); // just for UX
     return pokemonList;
+}
+
+// @param speciesUri: string - ポケモンの種類のURI (ex: https://pokeapi.co/api/v2/pokemon-species/25/)
+// NOTE: idからポケモンのおおむねの情報を取得することができるAPIに、日本語表記が含まれるspeciesのAPIのURIが含まれているので、引数をURIにしている。
+const toJapaneseWithAPICall = async (speciesUri: string) => {
+    const speciesResponse = await axios.get(speciesUri);
+    const jp_name = speciesResponse.data.names.find((name: any) => name.language.name === 'ja').name;
+    return jp_name;
 }
 
 const new_pokemon = (id: number, name: string, stats: Stats): Pokemon => {

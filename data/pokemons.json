@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "bulbasaur",
+    "name": "フシギダネ",
     "stats": {
       "hp": 45,
       "attack": 49,
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "name": "ivysaur",
+    "name": "フシギソウ",
     "stats": {
       "hp": 60,
       "attack": 62,
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "name": "venusaur",
+    "name": "フシギバナ",
     "stats": {
       "hp": 80,
       "attack": 82,
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "name": "charmander",
+    "name": "ヒトカゲ",
     "stats": {
       "hp": 39,
       "attack": 52,
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "name": "charmeleon",
+    "name": "リザード",
     "stats": {
       "hp": 58,
       "attack": 64,
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "name": "charizard",
+    "name": "リザードン",
     "stats": {
       "hp": 78,
       "attack": 84,
@@ -73,7 +73,7 @@
   },
   {
     "id": 7,
-    "name": "squirtle",
+    "name": "ゼニガメ",
     "stats": {
       "hp": 44,
       "attack": 48,
@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "name": "wartortle",
+    "name": "カメール",
     "stats": {
       "hp": 59,
       "attack": 63,
@@ -97,7 +97,7 @@
   },
   {
     "id": 9,
-    "name": "blastoise",
+    "name": "カメックス",
     "stats": {
       "hp": 79,
       "attack": 83,
@@ -109,7 +109,7 @@
   },
   {
     "id": 10,
-    "name": "caterpie",
+    "name": "キャタピー",
     "stats": {
       "hp": 45,
       "attack": 30,
@@ -121,7 +121,7 @@
   },
   {
     "id": 11,
-    "name": "metapod",
+    "name": "トランセル",
     "stats": {
       "hp": 50,
       "attack": 20,
@@ -133,7 +133,7 @@
   },
   {
     "id": 12,
-    "name": "butterfree",
+    "name": "バタフリー",
     "stats": {
       "hp": 60,
       "attack": 45,
@@ -145,7 +145,7 @@
   },
   {
     "id": 13,
-    "name": "weedle",
+    "name": "ビードル",
     "stats": {
       "hp": 40,
       "attack": 35,
@@ -157,7 +157,7 @@
   },
   {
     "id": 14,
-    "name": "kakuna",
+    "name": "コクーン",
     "stats": {
       "hp": 45,
       "attack": 25,
@@ -169,7 +169,7 @@
   },
   {
     "id": 15,
-    "name": "beedrill",
+    "name": "スピアー",
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -181,7 +181,7 @@
   },
   {
     "id": 16,
-    "name": "pidgey",
+    "name": "ポッポ",
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -193,7 +193,7 @@
   },
   {
     "id": 17,
-    "name": "pidgeotto",
+    "name": "ピジョン",
     "stats": {
       "hp": 63,
       "attack": 60,
@@ -205,7 +205,7 @@
   },
   {
     "id": 18,
-    "name": "pidgeot",
+    "name": "ピジョット",
     "stats": {
       "hp": 83,
       "attack": 80,
@@ -217,7 +217,7 @@
   },
   {
     "id": 19,
-    "name": "rattata",
+    "name": "コラッタ",
     "stats": {
       "hp": 30,
       "attack": 56,
@@ -229,7 +229,7 @@
   },
   {
     "id": 20,
-    "name": "raticate",
+    "name": "ラッタ",
     "stats": {
       "hp": 55,
       "attack": 81,
@@ -241,7 +241,7 @@
   },
   {
     "id": 21,
-    "name": "spearow",
+    "name": "オニスズメ",
     "stats": {
       "hp": 40,
       "attack": 60,
@@ -253,7 +253,7 @@
   },
   {
     "id": 22,
-    "name": "fearow",
+    "name": "オニドリル",
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -265,7 +265,7 @@
   },
   {
     "id": 23,
-    "name": "ekans",
+    "name": "アーボ",
     "stats": {
       "hp": 35,
       "attack": 60,
@@ -277,7 +277,7 @@
   },
   {
     "id": 24,
-    "name": "arbok",
+    "name": "アーボック",
     "stats": {
       "hp": 60,
       "attack": 95,
@@ -289,7 +289,7 @@
   },
   {
     "id": 25,
-    "name": "pikachu",
+    "name": "ピカチュウ",
     "stats": {
       "hp": 35,
       "attack": 55,
@@ -301,7 +301,7 @@
   },
   {
     "id": 26,
-    "name": "raichu",
+    "name": "ライチュウ",
     "stats": {
       "hp": 60,
       "attack": 90,
@@ -313,7 +313,7 @@
   },
   {
     "id": 27,
-    "name": "sandshrew",
+    "name": "サンド",
     "stats": {
       "hp": 50,
       "attack": 75,
@@ -325,7 +325,7 @@
   },
   {
     "id": 28,
-    "name": "sandslash",
+    "name": "サンドパン",
     "stats": {
       "hp": 75,
       "attack": 100,
@@ -337,7 +337,7 @@
   },
   {
     "id": 29,
-    "name": "nidoran-f",
+    "name": "ニドラン♀",
     "stats": {
       "hp": 55,
       "attack": 47,
@@ -349,7 +349,7 @@
   },
   {
     "id": 30,
-    "name": "nidorina",
+    "name": "ニドリーナ",
     "stats": {
       "hp": 70,
       "attack": 62,
@@ -361,7 +361,7 @@
   },
   {
     "id": 31,
-    "name": "nidoqueen",
+    "name": "ニドクイン",
     "stats": {
       "hp": 90,
       "attack": 92,
@@ -373,7 +373,7 @@
   },
   {
     "id": 32,
-    "name": "nidoran-m",
+    "name": "ニドラン♂",
     "stats": {
       "hp": 46,
       "attack": 57,
@@ -385,7 +385,7 @@
   },
   {
     "id": 33,
-    "name": "nidorino",
+    "name": "ニドリーノ",
     "stats": {
       "hp": 61,
       "attack": 72,
@@ -397,7 +397,7 @@
   },
   {
     "id": 34,
-    "name": "nidoking",
+    "name": "ニドキング",
     "stats": {
       "hp": 81,
       "attack": 102,
@@ -409,7 +409,7 @@
   },
   {
     "id": 35,
-    "name": "clefairy",
+    "name": "ピッピ",
     "stats": {
       "hp": 70,
       "attack": 45,
@@ -421,7 +421,7 @@
   },
   {
     "id": 36,
-    "name": "clefable",
+    "name": "ピクシー",
     "stats": {
       "hp": 95,
       "attack": 70,
@@ -433,7 +433,7 @@
   },
   {
     "id": 37,
-    "name": "vulpix",
+    "name": "ロコン",
     "stats": {
       "hp": 38,
       "attack": 41,
@@ -445,7 +445,7 @@
   },
   {
     "id": 38,
-    "name": "ninetales",
+    "name": "キュウコン",
     "stats": {
       "hp": 73,
       "attack": 76,
@@ -457,7 +457,7 @@
   },
   {
     "id": 39,
-    "name": "jigglypuff",
+    "name": "プリン",
     "stats": {
       "hp": 115,
       "attack": 45,
@@ -469,7 +469,7 @@
   },
   {
     "id": 40,
-    "name": "wigglytuff",
+    "name": "プクリン",
     "stats": {
       "hp": 140,
       "attack": 70,
@@ -481,7 +481,7 @@
   },
   {
     "id": 41,
-    "name": "zubat",
+    "name": "ズバット",
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -493,7 +493,7 @@
   },
   {
     "id": 42,
-    "name": "golbat",
+    "name": "ゴルバット",
     "stats": {
       "hp": 75,
       "attack": 80,
@@ -505,7 +505,7 @@
   },
   {
     "id": 43,
-    "name": "oddish",
+    "name": "ナゾノクサ",
     "stats": {
       "hp": 45,
       "attack": 50,
@@ -517,7 +517,7 @@
   },
   {
     "id": 44,
-    "name": "gloom",
+    "name": "クサイハナ",
     "stats": {
       "hp": 60,
       "attack": 65,
@@ -529,7 +529,7 @@
   },
   {
     "id": 45,
-    "name": "vileplume",
+    "name": "ラフレシア",
     "stats": {
       "hp": 75,
       "attack": 80,
@@ -541,7 +541,7 @@
   },
   {
     "id": 46,
-    "name": "paras",
+    "name": "パラス",
     "stats": {
       "hp": 35,
       "attack": 70,
@@ -553,7 +553,7 @@
   },
   {
     "id": 47,
-    "name": "parasect",
+    "name": "パラセクト",
     "stats": {
       "hp": 60,
       "attack": 95,
@@ -565,7 +565,7 @@
   },
   {
     "id": 48,
-    "name": "venonat",
+    "name": "コンパン",
     "stats": {
       "hp": 60,
       "attack": 55,
@@ -577,7 +577,7 @@
   },
   {
     "id": 49,
-    "name": "venomoth",
+    "name": "モルフォン",
     "stats": {
       "hp": 70,
       "attack": 65,
@@ -589,7 +589,7 @@
   },
   {
     "id": 50,
-    "name": "diglett",
+    "name": "ディグダ",
     "stats": {
       "hp": 10,
       "attack": 55,
@@ -601,7 +601,7 @@
   },
   {
     "id": 51,
-    "name": "dugtrio",
+    "name": "ダグトリオ",
     "stats": {
       "hp": 35,
       "attack": 100,
@@ -613,7 +613,7 @@
   },
   {
     "id": 52,
-    "name": "meowth",
+    "name": "ニャース",
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -625,7 +625,7 @@
   },
   {
     "id": 53,
-    "name": "persian",
+    "name": "ペルシアン",
     "stats": {
       "hp": 65,
       "attack": 70,
@@ -637,7 +637,7 @@
   },
   {
     "id": 54,
-    "name": "psyduck",
+    "name": "コダック",
     "stats": {
       "hp": 50,
       "attack": 52,
@@ -649,7 +649,7 @@
   },
   {
     "id": 55,
-    "name": "golduck",
+    "name": "ゴルダック",
     "stats": {
       "hp": 80,
       "attack": 82,
@@ -661,7 +661,7 @@
   },
   {
     "id": 56,
-    "name": "mankey",
+    "name": "マンキー",
     "stats": {
       "hp": 40,
       "attack": 80,
@@ -673,7 +673,7 @@
   },
   {
     "id": 57,
-    "name": "primeape",
+    "name": "オコリザル",
     "stats": {
       "hp": 65,
       "attack": 105,
@@ -685,7 +685,7 @@
   },
   {
     "id": 58,
-    "name": "growlithe",
+    "name": "ガーディ",
     "stats": {
       "hp": 55,
       "attack": 70,
@@ -697,7 +697,7 @@
   },
   {
     "id": 59,
-    "name": "arcanine",
+    "name": "ウインディ",
     "stats": {
       "hp": 90,
       "attack": 110,
@@ -709,7 +709,7 @@
   },
   {
     "id": 60,
-    "name": "poliwag",
+    "name": "ニョロモ",
     "stats": {
       "hp": 40,
       "attack": 50,
@@ -721,7 +721,7 @@
   },
   {
     "id": 61,
-    "name": "poliwhirl",
+    "name": "ニョロゾ",
     "stats": {
       "hp": 65,
       "attack": 65,
@@ -733,7 +733,7 @@
   },
   {
     "id": 62,
-    "name": "poliwrath",
+    "name": "ニョロボン",
     "stats": {
       "hp": 90,
       "attack": 95,
@@ -745,7 +745,7 @@
   },
   {
     "id": 63,
-    "name": "abra",
+    "name": "ケーシィ",
     "stats": {
       "hp": 25,
       "attack": 20,
@@ -757,7 +757,7 @@
   },
   {
     "id": 64,
-    "name": "kadabra",
+    "name": "ユンゲラー",
     "stats": {
       "hp": 40,
       "attack": 35,
@@ -769,7 +769,7 @@
   },
   {
     "id": 65,
-    "name": "alakazam",
+    "name": "フーディン",
     "stats": {
       "hp": 55,
       "attack": 50,
@@ -781,7 +781,7 @@
   },
   {
     "id": 66,
-    "name": "machop",
+    "name": "ワンリキー",
     "stats": {
       "hp": 70,
       "attack": 80,
@@ -793,7 +793,7 @@
   },
   {
     "id": 67,
-    "name": "machoke",
+    "name": "ゴーリキー",
     "stats": {
       "hp": 80,
       "attack": 100,
@@ -805,7 +805,7 @@
   },
   {
     "id": 68,
-    "name": "machamp",
+    "name": "カイリキー",
     "stats": {
       "hp": 90,
       "attack": 130,
@@ -817,7 +817,7 @@
   },
   {
     "id": 69,
-    "name": "bellsprout",
+    "name": "マダツボミ",
     "stats": {
       "hp": 50,
       "attack": 75,
@@ -829,7 +829,7 @@
   },
   {
     "id": 70,
-    "name": "weepinbell",
+    "name": "ウツドン",
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -841,7 +841,7 @@
   },
   {
     "id": 71,
-    "name": "victreebel",
+    "name": "ウツボット",
     "stats": {
       "hp": 80,
       "attack": 105,
@@ -853,7 +853,7 @@
   },
   {
     "id": 72,
-    "name": "tentacool",
+    "name": "メノクラゲ",
     "stats": {
       "hp": 40,
       "attack": 40,
@@ -865,7 +865,7 @@
   },
   {
     "id": 73,
-    "name": "tentacruel",
+    "name": "ドククラゲ",
     "stats": {
       "hp": 80,
       "attack": 70,
@@ -877,7 +877,7 @@
   },
   {
     "id": 74,
-    "name": "geodude",
+    "name": "イシツブテ",
     "stats": {
       "hp": 40,
       "attack": 80,
@@ -889,7 +889,7 @@
   },
   {
     "id": 75,
-    "name": "graveler",
+    "name": "ゴローン",
     "stats": {
       "hp": 55,
       "attack": 95,
@@ -901,7 +901,7 @@
   },
   {
     "id": 76,
-    "name": "golem",
+    "name": "ゴローニャ",
     "stats": {
       "hp": 80,
       "attack": 120,
@@ -913,7 +913,7 @@
   },
   {
     "id": 77,
-    "name": "ponyta",
+    "name": "ポニータ",
     "stats": {
       "hp": 50,
       "attack": 85,
@@ -925,7 +925,7 @@
   },
   {
     "id": 78,
-    "name": "rapidash",
+    "name": "ギャロップ",
     "stats": {
       "hp": 65,
       "attack": 100,
@@ -937,7 +937,7 @@
   },
   {
     "id": 79,
-    "name": "slowpoke",
+    "name": "ヤドン",
     "stats": {
       "hp": 90,
       "attack": 65,
@@ -949,7 +949,7 @@
   },
   {
     "id": 80,
-    "name": "slowbro",
+    "name": "ヤドラン",
     "stats": {
       "hp": 95,
       "attack": 75,
@@ -961,7 +961,7 @@
   },
   {
     "id": 81,
-    "name": "magnemite",
+    "name": "コイル",
     "stats": {
       "hp": 25,
       "attack": 35,
@@ -973,7 +973,7 @@
   },
   {
     "id": 82,
-    "name": "magneton",
+    "name": "レアコイル",
     "stats": {
       "hp": 50,
       "attack": 60,
@@ -985,7 +985,7 @@
   },
   {
     "id": 83,
-    "name": "farfetchd",
+    "name": "カモネギ",
     "stats": {
       "hp": 52,
       "attack": 90,
@@ -997,7 +997,7 @@
   },
   {
     "id": 84,
-    "name": "doduo",
+    "name": "ドードー",
     "stats": {
       "hp": 35,
       "attack": 85,
@@ -1009,7 +1009,7 @@
   },
   {
     "id": 85,
-    "name": "dodrio",
+    "name": "ドードリオ",
     "stats": {
       "hp": 60,
       "attack": 110,
@@ -1021,7 +1021,7 @@
   },
   {
     "id": 86,
-    "name": "seel",
+    "name": "パウワウ",
     "stats": {
       "hp": 65,
       "attack": 45,
@@ -1033,7 +1033,7 @@
   },
   {
     "id": 87,
-    "name": "dewgong",
+    "name": "ジュゴン",
     "stats": {
       "hp": 90,
       "attack": 70,
@@ -1045,7 +1045,7 @@
   },
   {
     "id": 88,
-    "name": "grimer",
+    "name": "ベトベター",
     "stats": {
       "hp": 80,
       "attack": 80,
@@ -1057,7 +1057,7 @@
   },
   {
     "id": 89,
-    "name": "muk",
+    "name": "ベトベトン",
     "stats": {
       "hp": 105,
       "attack": 105,
@@ -1069,7 +1069,7 @@
   },
   {
     "id": 90,
-    "name": "shellder",
+    "name": "シェルダー",
     "stats": {
       "hp": 30,
       "attack": 65,
@@ -1081,7 +1081,7 @@
   },
   {
     "id": 91,
-    "name": "cloyster",
+    "name": "パルシェン",
     "stats": {
       "hp": 50,
       "attack": 95,
@@ -1093,7 +1093,7 @@
   },
   {
     "id": 92,
-    "name": "gastly",
+    "name": "ゴース",
     "stats": {
       "hp": 30,
       "attack": 35,
@@ -1105,7 +1105,7 @@
   },
   {
     "id": 93,
-    "name": "haunter",
+    "name": "ゴースト",
     "stats": {
       "hp": 45,
       "attack": 50,
@@ -1117,7 +1117,7 @@
   },
   {
     "id": 94,
-    "name": "gengar",
+    "name": "ゲンガー",
     "stats": {
       "hp": 60,
       "attack": 65,
@@ -1129,7 +1129,7 @@
   },
   {
     "id": 95,
-    "name": "onix",
+    "name": "イワーク",
     "stats": {
       "hp": 35,
       "attack": 45,
@@ -1141,7 +1141,7 @@
   },
   {
     "id": 96,
-    "name": "drowzee",
+    "name": "スリープ",
     "stats": {
       "hp": 60,
       "attack": 48,
@@ -1153,7 +1153,7 @@
   },
   {
     "id": 97,
-    "name": "hypno",
+    "name": "スリーパー",
     "stats": {
       "hp": 85,
       "attack": 73,
@@ -1165,7 +1165,7 @@
   },
   {
     "id": 98,
-    "name": "krabby",
+    "name": "クラブ",
     "stats": {
       "hp": 30,
       "attack": 105,
@@ -1177,7 +1177,7 @@
   },
   {
     "id": 99,
-    "name": "kingler",
+    "name": "キングラー",
     "stats": {
       "hp": 55,
       "attack": 130,
@@ -1189,7 +1189,7 @@
   },
   {
     "id": 100,
-    "name": "voltorb",
+    "name": "ビリリダマ",
     "stats": {
       "hp": 40,
       "attack": 30,
@@ -1201,7 +1201,7 @@
   },
   {
     "id": 101,
-    "name": "electrode",
+    "name": "マルマイン",
     "stats": {
       "hp": 60,
       "attack": 50,
@@ -1213,7 +1213,7 @@
   },
   {
     "id": 102,
-    "name": "exeggcute",
+    "name": "タマタマ",
     "stats": {
       "hp": 60,
       "attack": 40,
@@ -1225,7 +1225,7 @@
   },
   {
     "id": 103,
-    "name": "exeggutor",
+    "name": "ナッシー",
     "stats": {
       "hp": 95,
       "attack": 95,
@@ -1237,7 +1237,7 @@
   },
   {
     "id": 104,
-    "name": "cubone",
+    "name": "カラカラ",
     "stats": {
       "hp": 50,
       "attack": 50,
@@ -1249,7 +1249,7 @@
   },
   {
     "id": 105,
-    "name": "marowak",
+    "name": "ガラガラ",
     "stats": {
       "hp": 60,
       "attack": 80,
@@ -1261,7 +1261,7 @@
   },
   {
     "id": 106,
-    "name": "hitmonlee",
+    "name": "サワムラー",
     "stats": {
       "hp": 50,
       "attack": 120,
@@ -1273,7 +1273,7 @@
   },
   {
     "id": 107,
-    "name": "hitmonchan",
+    "name": "エビワラー",
     "stats": {
       "hp": 50,
       "attack": 105,
@@ -1285,7 +1285,7 @@
   },
   {
     "id": 108,
-    "name": "lickitung",
+    "name": "ベロリンガ",
     "stats": {
       "hp": 90,
       "attack": 55,
@@ -1297,7 +1297,7 @@
   },
   {
     "id": 109,
-    "name": "koffing",
+    "name": "ドガース",
     "stats": {
       "hp": 40,
       "attack": 65,
@@ -1309,7 +1309,7 @@
   },
   {
     "id": 110,
-    "name": "weezing",
+    "name": "マタドガス",
     "stats": {
       "hp": 65,
       "attack": 90,
@@ -1321,7 +1321,7 @@
   },
   {
     "id": 111,
-    "name": "rhyhorn",
+    "name": "サイホーン",
     "stats": {
       "hp": 80,
       "attack": 85,
@@ -1333,7 +1333,7 @@
   },
   {
     "id": 112,
-    "name": "rhydon",
+    "name": "サイドン",
     "stats": {
       "hp": 105,
       "attack": 130,
@@ -1345,7 +1345,7 @@
   },
   {
     "id": 113,
-    "name": "chansey",
+    "name": "ラッキー",
     "stats": {
       "hp": 250,
       "attack": 5,
@@ -1357,7 +1357,7 @@
   },
   {
     "id": 114,
-    "name": "tangela",
+    "name": "モンジャラ",
     "stats": {
       "hp": 65,
       "attack": 55,
@@ -1369,7 +1369,7 @@
   },
   {
     "id": 115,
-    "name": "kangaskhan",
+    "name": "ガルーラ",
     "stats": {
       "hp": 105,
       "attack": 95,
@@ -1381,7 +1381,7 @@
   },
   {
     "id": 116,
-    "name": "horsea",
+    "name": "タッツー",
     "stats": {
       "hp": 30,
       "attack": 40,
@@ -1393,7 +1393,7 @@
   },
   {
     "id": 117,
-    "name": "seadra",
+    "name": "シードラ",
     "stats": {
       "hp": 55,
       "attack": 65,
@@ -1405,7 +1405,7 @@
   },
   {
     "id": 118,
-    "name": "goldeen",
+    "name": "トサキント",
     "stats": {
       "hp": 45,
       "attack": 67,
@@ -1417,7 +1417,7 @@
   },
   {
     "id": 119,
-    "name": "seaking",
+    "name": "アズマオウ",
     "stats": {
       "hp": 80,
       "attack": 92,
@@ -1429,7 +1429,7 @@
   },
   {
     "id": 120,
-    "name": "staryu",
+    "name": "ヒトデマン",
     "stats": {
       "hp": 30,
       "attack": 45,
@@ -1441,7 +1441,7 @@
   },
   {
     "id": 121,
-    "name": "starmie",
+    "name": "スターミー",
     "stats": {
       "hp": 60,
       "attack": 75,
@@ -1453,7 +1453,7 @@
   },
   {
     "id": 122,
-    "name": "mr-mime",
+    "name": "バリヤード",
     "stats": {
       "hp": 40,
       "attack": 45,
@@ -1465,7 +1465,7 @@
   },
   {
     "id": 123,
-    "name": "scyther",
+    "name": "ストライク",
     "stats": {
       "hp": 70,
       "attack": 110,
@@ -1477,7 +1477,7 @@
   },
   {
     "id": 124,
-    "name": "jynx",
+    "name": "ルージュラ",
     "stats": {
       "hp": 65,
       "attack": 50,
@@ -1489,7 +1489,7 @@
   },
   {
     "id": 125,
-    "name": "electabuzz",
+    "name": "エレブー",
     "stats": {
       "hp": 65,
       "attack": 83,
@@ -1501,7 +1501,7 @@
   },
   {
     "id": 126,
-    "name": "magmar",
+    "name": "ブーバー",
     "stats": {
       "hp": 65,
       "attack": 95,
@@ -1513,7 +1513,7 @@
   },
   {
     "id": 127,
-    "name": "pinsir",
+    "name": "カイロス",
     "stats": {
       "hp": 65,
       "attack": 125,
@@ -1525,7 +1525,7 @@
   },
   {
     "id": 128,
-    "name": "tauros",
+    "name": "ケンタロス",
     "stats": {
       "hp": 75,
       "attack": 100,
@@ -1537,7 +1537,7 @@
   },
   {
     "id": 129,
-    "name": "magikarp",
+    "name": "コイキング",
     "stats": {
       "hp": 20,
       "attack": 10,
@@ -1549,7 +1549,7 @@
   },
   {
     "id": 130,
-    "name": "gyarados",
+    "name": "ギャラドス",
     "stats": {
       "hp": 95,
       "attack": 125,
@@ -1561,7 +1561,7 @@
   },
   {
     "id": 131,
-    "name": "lapras",
+    "name": "ラプラス",
     "stats": {
       "hp": 130,
       "attack": 85,
@@ -1573,7 +1573,7 @@
   },
   {
     "id": 132,
-    "name": "ditto",
+    "name": "メタモン",
     "stats": {
       "hp": 48,
       "attack": 48,
@@ -1585,7 +1585,7 @@
   },
   {
     "id": 133,
-    "name": "eevee",
+    "name": "イーブイ",
     "stats": {
       "hp": 55,
       "attack": 55,
@@ -1597,7 +1597,7 @@
   },
   {
     "id": 134,
-    "name": "vaporeon",
+    "name": "シャワーズ",
     "stats": {
       "hp": 130,
       "attack": 65,
@@ -1609,7 +1609,7 @@
   },
   {
     "id": 135,
-    "name": "jolteon",
+    "name": "サンダース",
     "stats": {
       "hp": 65,
       "attack": 65,
@@ -1621,7 +1621,7 @@
   },
   {
     "id": 136,
-    "name": "flareon",
+    "name": "ブースター",
     "stats": {
       "hp": 65,
       "attack": 130,
@@ -1633,7 +1633,7 @@
   },
   {
     "id": 137,
-    "name": "porygon",
+    "name": "ポリゴン",
     "stats": {
       "hp": 65,
       "attack": 60,
@@ -1645,7 +1645,7 @@
   },
   {
     "id": 138,
-    "name": "omanyte",
+    "name": "オムナイト",
     "stats": {
       "hp": 35,
       "attack": 40,
@@ -1657,7 +1657,7 @@
   },
   {
     "id": 139,
-    "name": "omastar",
+    "name": "オムスター",
     "stats": {
       "hp": 70,
       "attack": 60,
@@ -1669,7 +1669,7 @@
   },
   {
     "id": 140,
-    "name": "kabuto",
+    "name": "カブト",
     "stats": {
       "hp": 30,
       "attack": 80,
@@ -1681,7 +1681,7 @@
   },
   {
     "id": 141,
-    "name": "kabutops",
+    "name": "カブトプス",
     "stats": {
       "hp": 60,
       "attack": 115,
@@ -1693,7 +1693,7 @@
   },
   {
     "id": 142,
-    "name": "aerodactyl",
+    "name": "プテラ",
     "stats": {
       "hp": 80,
       "attack": 105,
@@ -1705,7 +1705,7 @@
   },
   {
     "id": 143,
-    "name": "snorlax",
+    "name": "カビゴン",
     "stats": {
       "hp": 160,
       "attack": 110,
@@ -1717,7 +1717,7 @@
   },
   {
     "id": 144,
-    "name": "articuno",
+    "name": "フリーザー",
     "stats": {
       "hp": 90,
       "attack": 85,
@@ -1729,7 +1729,7 @@
   },
   {
     "id": 145,
-    "name": "zapdos",
+    "name": "サンダー",
     "stats": {
       "hp": 90,
       "attack": 90,
@@ -1741,7 +1741,7 @@
   },
   {
     "id": 146,
-    "name": "moltres",
+    "name": "ファイヤー",
     "stats": {
       "hp": 90,
       "attack": 100,
@@ -1753,7 +1753,7 @@
   },
   {
     "id": 147,
-    "name": "dratini",
+    "name": "ミニリュウ",
     "stats": {
       "hp": 41,
       "attack": 64,
@@ -1765,7 +1765,7 @@
   },
   {
     "id": 148,
-    "name": "dragonair",
+    "name": "ハクリュー",
     "stats": {
       "hp": 61,
       "attack": 84,
@@ -1777,7 +1777,7 @@
   },
   {
     "id": 149,
-    "name": "dragonite",
+    "name": "カイリュー",
     "stats": {
       "hp": 91,
       "attack": 134,
@@ -1789,7 +1789,7 @@
   },
   {
     "id": 150,
-    "name": "mewtwo",
+    "name": "ミュウツー",
     "stats": {
       "hp": 106,
       "attack": 110,
@@ -1801,7 +1801,7 @@
   },
   {
     "id": 151,
-    "name": "mew",
+    "name": "ミュウ",
     "stats": {
       "hp": 100,
       "attack": 100,
