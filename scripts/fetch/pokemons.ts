@@ -2,29 +2,13 @@ const fs = require('fs');
 const axios = require('axios');
 const path = require('path');
 
+// HACK: @などでルートディレクトリを指定できるように
+import { Pokemon, Stats, StatName } from '../../types/pokemons';
+
 // HACK: スマートな方法があれば修正
 const PROJECT_ROOT = path.join(__dirname, '..', '..'); // プロジェクトのルートディレクトリ
+// HACK: envとかで管理したい
 const MAX_POKEMON_ID = 151; // 第1世代のポケモンの数が151匹
-
-interface Pokemon {
-    id: number;
-    name: string;
-    stats: Stats;
-}
-
-type StatName = 'hp' | 'attack' | 'defense' | 'special-attack' | 'special-defense' | 'speed';
-
-interface BaseStats {
-    hp: number;
-    attack: number;
-    defense: number;
-    'special-attack': number;
-    'special-defense': number;
-    speed: number;
-}
-
-// NOTE: Pick is just for flexibility. never mind.
-type Stats = Pick<BaseStats, StatName>;
 
 const fetchPokemons = async () => {
     let pokemonList: Pokemon[] = [];
