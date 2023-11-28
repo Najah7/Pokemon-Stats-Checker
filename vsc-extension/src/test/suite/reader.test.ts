@@ -1,4 +1,4 @@
-const { readPokemons, readPokemonById, readPokemonByName } = require('../utils/db/reader');
+const { readPokemons, readPokemonById, readPokemonByName } = require('../../utils/db/reader');
 
 describe('readPokemons function', () => {
     it('should return an array of Pokemon from the database', () => {
@@ -14,7 +14,7 @@ describe('readPokemonById function', () => {
         // NOTE: pikachu is my favorite pokemon, so I'm using it as an example
         const expected_output =  {
             id: 25,
-            name: 'pikachu',
+            name: 'ピカチュウ',
             stats: {
               hp: 35,
               attack: 55,
@@ -45,11 +45,11 @@ describe('readPokemonById function', () => {
 
 describe('readPokemonByName function', () => {
     it('should return a Pokemon object with the given name', () => {
-        const pokemon = readPokemonByName('pikachu');
+        const pokemon = readPokemonByName('ピカチュウ');
         // NOTE: pikachu is my favorite pokemon, so I'm using it as an example
         const expected_output =  {
             id: 25,
-            name: 'pikachu',
+            name: 'ピカチュウ',
             stats: {
               hp: 35,
               attack: 55,

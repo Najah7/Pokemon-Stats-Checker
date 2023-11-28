@@ -6,7 +6,7 @@ const path = require('path');
 import { Pokemon, Stats, StatName } from '../../types/pokemons';
 
 // HACK: スマートな方法があれば修正
-const PROJECT_ROOT = path.join(__dirname, '..', '..'); // プロジェクトのルートディレクトリ
+const PROJECT_ROOT = path.join(__dirname, '..', '..', '..'); // プロジェクトのルートディレクトリ
 // HACK: envとかで管理したい
 const MAX_POKEMON_ID = 151; // 第1世代のポケモンの数が151匹
 
@@ -73,7 +73,7 @@ async function sleep(ms: number) {
 
 if (require.main === module) {
     if (!fs.existsSync(`${PROJECT_ROOT}/data`)) {
-        fs.mkdirSync('`${PROJECT_ROOT}/data`');
+        fs.mkdirSync(`${PROJECT_ROOT}/data`);
     }
     (async () => {
         const pokemonList = await fetchPokemons();
