@@ -1,3 +1,6 @@
 export function f(x: number): number {
-    return Math.floor(Math.min(x, 100));
+    let y = Math.min(x, 150);
+    y = Math.max(0, y);
+    y = Math.floor(y);
+    return y;
 }
