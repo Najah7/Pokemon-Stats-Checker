@@ -24,7 +24,7 @@ const fetchPokemons = async () => {
                 acc[statName] = stat.base_stat;
                 return acc;
             }, {} as Stats);
-            const pokemon = new_pokemon(id, name, stats);
+            const pokemon = newPokemon(id, name, stats);
             pokemonList.push(pokemon);
         } catch (error: any) {
             console.error('[Error] Failed to fetch pokemon data at id:', i);
@@ -46,7 +46,7 @@ const toJapaneseWithAPICall = async (speciesUri: string) => {
     return jp_name;
 }
 
-const new_pokemon = (id: number, name: string, stats: Stats): Pokemon => {
+const newPokemon = (id: number, name: string, stats: Stats): Pokemon => {
     const pokemon = {
         id: id,
         name: name,
