@@ -4,3 +4,4 @@ node_modules
 .vscode-test/
 .DS_Store
 PentagonGuestYudaisugiyama_credentials.csv
+.env
