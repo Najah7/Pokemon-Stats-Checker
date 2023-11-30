@@ -11,7 +11,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onView:pentagon-sidebar-view"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -28,7 +29,27 @@
         "command": "pentagon.get",
         "title": "pentagon: get"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pentagon-sidebar-view",
+          "title": "Pentagon",
+          "icon": "media/heart.svg"
+        }
+      ]
+    },
+    "views": {
+      "pentagon-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "pentagon-sidebar",
+          "name": "Quize",
+          "icon": "media/heart.svg",
+          "contextualTitle": "Quize"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
