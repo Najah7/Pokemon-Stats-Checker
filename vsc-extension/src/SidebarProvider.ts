@@ -77,7 +77,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         </script>
 			</head>
       <body>
-        <h1>Pentagon</h1>
+        <h1>Base-stats-checker</h1>
         <p>問題を表示</p>
         <input type="text" id="answer" />
         <button id="submit">回答</button>

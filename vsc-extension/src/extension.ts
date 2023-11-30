@@ -30,18 +30,18 @@ export function activate(context: vscode.ExtensionContext) {
   const sidebarProvider = new SidebarProvider(context.extensionUri);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(
-      "pentagon-sidebar",
+      "base-stats-checker-sidebar",
       sidebarProvider
     )
   );
 
-  // >pentagon:start （問題を表示)
-  let disposable = vscode.commands.registerCommand("pentagon.start", () => {
+  // >base-stats-checker:start （問題を表示)
+  let disposable = vscode.commands.registerCommand("base-stats-checker.start", () => {
     start();
   });
 
-  // >pentagon:post （問題の提出)
-  disposable = vscode.commands.registerCommand("pentagon.post", async () => {
+  // >base-stats-checker:post （問題の提出)
+  disposable = vscode.commands.registerCommand("base-stats-checker.post", async () => {
     const answer = await vscode.window.showInputBox({
       title: "答えを半角で入力（面積が3の場合: 3）",
     });
@@ -105,7 +105,7 @@ export function activate(context: vscode.ExtensionContext) {
       // startTimeがNaNの場合
     } else if (isNaN(startTime)) {
       vscode.window.showInformationMessage(
-        `pentagon:startコマンドで問題を開始してください`
+        `base-stats-checker:startコマンドで問題を開始してください`
       );
     }
   });
@@ -156,8 +156,8 @@ export function activate(context: vscode.ExtensionContext) {
     }
   });
 
-  // >pentagon:get （グラフURLの取得)
-  disposable = vscode.commands.registerCommand("pentagon.get", () => {
+  // >base-stats-checker:get （グラフURLの取得)
+  disposable = vscode.commands.registerCommand("base-stats-checker.get", () => {
     getUrl();
   });
 
