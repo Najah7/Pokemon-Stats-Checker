@@ -1,6 +1,14 @@
 import * as vscode from "vscode";
 import { getNonce } from "./getNonce";
 
+// TODO: どうにかする
+const QUIESTIONS = [
+  {
+    question: "低辺2m、高さ3mの3角形の面積は?",
+    answer: "3",
+  },
+];
+
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
   _doc?: vscode.TextDocument;
@@ -60,6 +68,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     // Use a nonce to only allow a specific script to be run.
     const nonce = getNonce();
 
+    const question = QUIESTIONS[0];
+
     return `<!DOCTYPE html>
 			<html lang="en">
 			<head>
@@ -78,7 +88,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 			</head>
       <body>
         <h1>Base-stats-checker</h1>
-        <p>問題を表示</p>
+        <p>Q: ${question.question}</p>
         <input type="text" id="answer" />
         <button id="submit">回答</button>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
