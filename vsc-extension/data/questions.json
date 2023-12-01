@@ -1,32 +1,32 @@
 [
     {
         "id": 1,
-        "question": "What is the capital of India?",
+        "text": "What is the capital of India?",
         "answer": "New Delhi"
     },
     {
         "id": 2,
-        "question": "What is the capital of USA?",
+        "text": "What is the capital of USA?",
         "answer": "Washington DC"
     },
     {
         "id": 3,
-        "question": "What is the capital of UK?",
+        "text": "What is the capital of UK?",
         "answer": "London"
     },
     {
         "id": 4,
-        "question": "What is the capital of Australia?",
+        "text": "What is the capital of Australia?",
         "answer": "Canberra"
     },
     {
         "id": 5,
-        "question": "What is the capital of Canada?",
+        "text": "What is the capital of Canada?",
         "answer": "Ottawa"
     },
     {
         "id": 6,
-        "question": "What is the capital of China?",
+        "text": "What is the capital of China?",
         "answer": "Beijing"
     }
 ]
