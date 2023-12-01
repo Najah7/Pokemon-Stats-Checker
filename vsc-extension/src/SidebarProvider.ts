@@ -25,7 +25,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       switch (data.type) {
         case "start": {
           const script = (await vscode.commands.executeCommand(
-            "pentagon.start"
+            "base-stats-checker.start"
           )) as string;
           webviewView.webview.postMessage({ type: "start", value: script });
           break;
@@ -34,7 +34,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           if (!data.value) {
             return;
           }
-          vscode.commands.executeCommand("pentagon.post", data.value);
+          vscode.commands.executeCommand("base-stats-checker.post", data.value);
           break;
         }
         case "onInfo": {
@@ -87,7 +87,6 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 			</head>
       <body>
         <h1>Base-stats-checker</h1>
-        <p>Q: ${question.question}</p>
         <button id="start">start</button>
         <p id="script"></p>
         <input type="text" id="answer" />

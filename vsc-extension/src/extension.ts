@@ -37,16 +37,19 @@ export function activate(context: vscode.ExtensionContext) {
     )
   );
 
-  // >base-stats-checer:start （問題を表示)
-  let disposable = vscode.commands.registerCommand("base-stats-checer.start", () => {
-    const { question } = start();
-    trueAnswer = question.trueAnswer;
-    return question.script;
-  });
+  // >base-stats-checker:start （問題を表示)
+  let disposable = vscode.commands.registerCommand(
+    "base-stats-checker.start",
+    () => {
+      const { question } = start();
+      trueAnswer = question.trueAnswer;
+      return question.script;
+    }
+  );
 
-  // >base-stats-checer:post （問題の提出)
+  // >base-stats-checker:post （問題の提出)
   disposable = vscode.commands.registerCommand(
-    "base-stats-checer.post",
+    "base-stats-checker.post",
     async (answer: string) => {
       // Constants for calculations
       const baseHp: number = 300;
@@ -105,11 +108,12 @@ export function activate(context: vscode.ExtensionContext) {
       } else if (answer !== trueAnswer) {
         vscode.window.showInformationMessage(`答えが違います`);
 
-      // startTimeがNaNの場合
-    } else if (isNaN(startTime)) {
-      vscode.window.showInformationMessage(
-        `base-stats-checker:startコマンドで問題を開始してください`
-      );
+        // startTimeがNaNの場合
+      } else if (isNaN(startTime)) {
+        vscode.window.showInformationMessage(
+          `base-stats-checker:startコマンドで問題を開始してください`
+        );
+      }
     }
   );
 
