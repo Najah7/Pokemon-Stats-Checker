@@ -1,6 +1,6 @@
 {
-  "name": "pentagon",
-  "displayName": "pentagon",
+  "name": "base-stats-checker",
+  "displayName": "base-stats-checker",
   "description": "",
   "version": "1.0.0",
   "icon": "img/logo@3x.png",
@@ -11,24 +11,45 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onView:base-stats-checker-sidebar-view"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "pentagon.start",
-        "title": "pentagon: start"
+        "command": "base-stats-checker.start",
+        "title": "base-stats-checker: start"
       },
       {
-        "command": "pentagon.post",
-        "title": "pentagon: post"
+        "command": "base-stats-checker.post",
+        "title": "base-stats-checker: post"
       },
       {
-        "command": "pentagon.get",
-        "title": "pentagon: get"
+        "command": "base-stats-checker.get",
+        "title": "base-stats-checker: get"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "base-stats-checker-sidebar-view",
+          "title": "base-stats-checker",
+          "icon": "media/heart.svg"
+        }
+      ]
+    },
+    "views": {
+      "base-stats-checker-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "base-stats-checker-sidebar",
+          "name": "Quize",
+          "icon": "media/heart.svg",
+          "contextualTitle": "Quize"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

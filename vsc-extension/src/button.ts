@@ -1,8 +1,9 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
 // ステータスバーにボタンを表示
 export const button = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Right, 0
+  vscode.StatusBarAlignment.Right,
+  0
 );
-button.command = 'pentagon.post';
-button.text = 'Post (pentagon)';
+button.command = "base-stats-checker.post";
+button.text = "Post (base-stats-checker)";
