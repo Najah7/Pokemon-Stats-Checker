@@ -16,20 +16,6 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "base-stats-checker.start",
-        "title": "base-stats-checker: start"
-      },
-      {
-        "command": "base-stats-checker.post",
-        "title": "base-stats-checker: post"
-      },
-      {
-        "command": "base-stats-checker.get",
-        "title": "base-stats-checker: get"
-      }
-    ],
     "viewsContainers": {
       "activitybar": [
         {
