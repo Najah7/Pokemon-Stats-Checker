@@ -14,13 +14,29 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       // Allow scripts in the webview
       enableScripts: true,
 
-      localResourceRoots: [this._extensionUri],
+      localResourceRoots: [vscode.Uri.joinPath(this._extensionUri, "media")],
     };
 
     webviewView.webview.html = this._getHtmlForWebview(webviewView.webview);
 
+    webviewView.webview.postMessage({ type: "setup" });
+
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
+        case "start": {
+          const script = (await vscode.commands.executeCommand(
+            "base-stats-checker.start"
+          )) as string;
+          webviewView.webview.postMessage({ type: "start", value: script });
+          break;
+        }
+        case "answer": {
+          if (!data.value) {
+            return;
+          }
+          vscode.commands.executeCommand("base-stats-checker.post", data.value);
+          break;
+        }
         case "onInfo": {
           if (!data.value) {
             return;
@@ -48,10 +64,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       vscode.Uri.joinPath(this._extensionUri, "media", "reset.css")
     );
     const scriptUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "out", "compiled/sidebar.js")
-    );
-    const styleMainUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "out", "compiled/sidebar.css")
+      vscode.Uri.joinPath(this._extensionUri, "media", "main.js")
     );
     const styleVSCodeUri = webview.asWebviewUri(
       vscode.Uri.joinPath(this._extensionUri, "media", "vscode.css")
@@ -71,18 +84,48 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<link href="${styleResetUri}" rel="stylesheet">
 				<link href="${styleVSCodeUri}" rel="stylesheet">
-        <link href="${styleMainUri}" rel="stylesheet">
-        <script nonce="${nonce}">
-            
-        </script>
 			</head>
       <body>
         <h1>Base-stats-checker</h1>
-        <p>問題を表示</p>
+        <button id="start">start</button>
+        <p id="script"></p>
         <input type="text" id="answer" />
         <button id="submit">回答</button>
-				<script nonce="${nonce}" src="${scriptUri}"></script>
+
+        <script>
+          const vscode = acquireVsCodeApi();
+
+          window.addEventListener("message", (event) => {
+            const message = event.data;
+            switch (message.type) {
+              case "start": {
+                const script = document.getElementById("script");
+                script.innerText = "Q:" + message.value;
+                break;
+              }
+            }
+          });
+
+          const startButton = document.getElementById("start");
+          startButton.addEventListener("click", () => {
+            vscode.postMessage({
+              type: "start",
+            });
+          });
+
+          const submitButton = document.getElementById("submit");
+          const answerInput = document.getElementById("answer");
+          submitButton.addEventListener("click", () => {
+            const answer = answerInput.value;
+            vscode.postMessage({
+              type: "answer",
+              value: answer,
+            });
+          });    
+        </script>
 			</body>
+			<script src="${scriptUri}">
+      </script>
 			</html>`;
   }
 }
