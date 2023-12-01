@@ -8,6 +8,15 @@ import { getUrl, getPokemon } from "./get";
 import { auth } from "./auth";
 import { SidebarProvider } from "./SidebarProvider";
 
+export type StatsType = {
+  h: number;
+  a: number;
+  b: number;
+  c: number;
+  d: number;
+  s: number;
+};
+
 export function activate(context: vscode.ExtensionContext) {
   // デバッグ
   console.log("activate");
@@ -23,12 +32,11 @@ export function activate(context: vscode.ExtensionContext) {
   var specialDiffenceCount: number = 0;
   var currentTextLength: number = 0;
 
-  let trueAnswer: string;
-
   // ステータスバーにボタンを表示
   context.subscriptions.push(button);
   button.show();
 
+  // SidebarProviderの登録
   const sidebarProvider = new SidebarProvider(context.extensionUri);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(
@@ -42,15 +50,14 @@ export function activate(context: vscode.ExtensionContext) {
     "base-stats-checker.start",
     () => {
       const { question } = start();
-      trueAnswer = question.trueAnswer;
-      return question.script;
+      return question;
     }
   );
 
   // >base-stats-checker:post （問題の提出)
   disposable = vscode.commands.registerCommand(
     "base-stats-checker.post",
-    async (answer: string) => {
+    async (isAnswerCorrect: string) => {
       // Constants for calculations
       const baseHp: number = 300;
       const baseDefense: number = 110;
@@ -60,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
       const specialDiffenceCoefficients: number = 2;
 
       // 正解の場合
-      if (answer === trueAnswer && !isNaN(startTime)) {
+      if (isAnswerCorrect && !isNaN(startTime)) {
         // 経過時間を計算
         const elapsedTime = (Date.now() - startTime) / 1000; // ミリ秒から秒に変換
 
@@ -92,20 +99,14 @@ export function activate(context: vscode.ExtensionContext) {
         // 種族値特徴の近いポケモンを探索
         getPokemon(h, a, b, c, d, s);
 
-        // 種族値の計算
-        const baseStats: number = h + a + b + c + d + s;
-
-        // メッセージとして出力
-        vscode.window.showInformationMessage(
-          `H${h} A${a} B${b} C${c} D${d} S${s}`
-        );
-        vscode.window.showInformationMessage(`あなたの種族値は${baseStats}!`);
-
         // メトリクスをPOST
         post(h, a, b, c, d, s);
 
+        // 種族値を返す
+        return { h, a, b, c, d, s };
+
         // 不正解の場合
-      } else if (answer !== trueAnswer) {
+      } else if (!isAnswerCorrect && !isNaN(startTime)) {
         vscode.window.showInformationMessage(`答えが違います`);
 
         // startTimeがNaNの場合

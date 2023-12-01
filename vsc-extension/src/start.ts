@@ -2,6 +2,11 @@ import * as vscode from "vscode";
 
 export let startTime: number;
 
+export type QuestionType = {
+  script: string;
+  trueAnswer: string;
+};
+
 // TODO: どうにかする
 const QUIESTIONS = [
   {

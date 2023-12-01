@@ -1,5 +1,7 @@
 import * as vscode from "vscode";
 import { getNonce } from "./getNonce";
+import { QuestionType } from "./start";
+import { StatsType } from "./extension";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -21,20 +23,42 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.postMessage({ type: "setup" });
 
+    let trueAnswer: string;
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
         case "start": {
-          const script = (await vscode.commands.executeCommand(
+          const question: QuestionType = (await vscode.commands.executeCommand(
             "base-stats-checker.start"
-          )) as string;
-          webviewView.webview.postMessage({ type: "start", value: script });
+          )) as QuestionType;
+          trueAnswer = question.trueAnswer;
+          webviewView.webview.postMessage({
+            type: "start",
+            value: question.script,
+          });
           break;
         }
         case "answer": {
           if (!data.value) {
             return;
           }
-          vscode.commands.executeCommand("base-stats-checker.post", data.value);
+          if (data.value === trueAnswer) {
+            const stats: StatsType = (await vscode.commands.executeCommand(
+              "base-stats-checker.post",
+              true
+            )) as StatsType;
+            const sum =
+              stats.h + stats.a + stats.b + stats.c + stats.d + stats.s;
+            const message = `h:${stats.h}, a:${stats.a}, b:${stats.b}, c:${stats.c}, d:${stats.d}, s:${stats.s}\nあなたの種族値は${sum}です`;
+            webviewView.webview.postMessage({
+              type: "corrected",
+              value: message,
+            });
+          } else {
+            webviewView.webview.postMessage({
+              type: "uncorrected",
+              value: "答えが間違っています",
+            });
+          }
           break;
         }
         case "onInfo": {
@@ -87,20 +111,48 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 			</head>
       <body>
         <h1>Base-stats-checker</h1>
-        <button id="start">start</button>
-        <p id="script"></p>
-        <input type="text" id="answer" />
-        <button id="submit">回答</button>
-
+        <divx class="ui" id="ready">
+          <p>あなたのエンジニア種族値を測ります</p>
+          <p>準備ができたらstartを押してください</p>
+          <button id="start">start</button>
+        </divx>
+        <div style="display: none;" class="ui" id="started">
+          <p id="script"></p>
+          <input type="text" id="answer" />
+          <p id="error"></p>
+          <button id="submit">回答</button>
+        </div>
+        <div style="display: none;" class="ui" id="corrected">
+          <p>正解!!</p>
+          <p id="stats"></p>
+        </div>
+        <div style="display: none;" class="ui" id="fetchedImg">
+          <p>あなたの種族値</p>
+          <img id="img" />
+        </div>
+        
         <script>
           const vscode = acquireVsCodeApi();
-
+          
           window.addEventListener("message", (event) => {
             const message = event.data;
             switch (message.type) {
               case "start": {
                 const script = document.getElementById("script");
                 script.innerText = "Q:" + message.value;
+                document.getElementById("ready").style.display = "none";
+                document.getElementById("started").style.display = "block";
+                break;
+              }
+              case "corrected": {
+                const stats = document.getElementById("stats");
+                stats.innerText = message.value;
+                document.getElementById("started").style.display = "none";
+                document.getElementById("corrected").style.display = "block";
+                break;
+              }
+              case "uncorrected": {
+                document.getElementById("error").innerText = message.value;
                 break;
               }
             }
