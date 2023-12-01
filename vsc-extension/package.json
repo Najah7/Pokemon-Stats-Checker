@@ -33,6 +33,13 @@
           "name": "Quize",
           "icon": "media/heart.svg",
           "contextualTitle": "Quize"
+        },
+        {
+          "type": "webview",
+          "id": "base-stats-checker-image",
+          "name": "一度プレイされた方",
+          "icon": "media/heart.svg",
+          "contextualTitle": "一度プレイされた方"
         }
       ]
     }
