@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { getNonce } from "./getNonce";
-import { QuestionType } from "./start";
-import { StatsType } from "./extension";
+import { QuestionType, start } from "./start";
+import { StatsType, calcStats } from "./calcStats";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -27,9 +27,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
         case "start": {
-          const question: QuestionType = (await vscode.commands.executeCommand(
-            "base-stats-checker.start"
-          )) as QuestionType;
+          const { question } = start();
           trueAnswer = question.trueAnswer;
           webviewView.webview.postMessage({
             type: "start",
@@ -42,10 +40,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
             return;
           }
           if (data.value === trueAnswer) {
-            const stats: StatsType = (await vscode.commands.executeCommand(
-              "base-stats-checker.post",
-              true
-            )) as StatsType;
+            const stats: StatsType = calcStats();
             const sum =
               stats.h + stats.a + stats.b + stats.c + stats.d + stats.s;
             const message = `h:${stats.h}, a:${stats.a}, b:${stats.b}, c:${stats.c}, d:${stats.d}, s:${stats.s}\nあなたの種族値は${sum}です`;
@@ -53,6 +48,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               type: "corrected",
               value: message,
             });
+
+            // // 種族値特徴の近いポケモンを探索
+            // getPokemon(h, a, b, c, d, s);
+
+            // // メトリクスをPOST
+            // post(h, a, b, c, d, s);
           } else {
             webviewView.webview.postMessage({
               type: "uncorrected",
