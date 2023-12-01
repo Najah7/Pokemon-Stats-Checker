@@ -17,7 +17,8 @@ It has a lot of features.
 We are writing about this soon.
 
 ## How to use
-We are writing about this soon.
+![usage.mp4](usage.mp4)
+I will monitor your coding activities within VSCode and evaluate them quantitatively using six metrics (hp, attack, defense, special attack, special defense, speed). The goal is to objectively assess your coding skills and potentially assist in grading coding assessments for companies. Additionally, user input logs will be saved in CSV format, paving the way for future possibilities of quantitative and automated coding evaluations through machine learning. However, current functionality is limited to confirming your coding characteristics, akin to discovering a perfect partner when compared to Pokémon base stats. So, let's proceed to solve the coding challenges and explore your coding traits in comparison to Pokémon base stats.
 
 ## What is Pokemon Base Stats?
 We are writing about this soon.
