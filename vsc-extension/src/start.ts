@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+import { openNote } from "./openNote";
 
 export let startTime: number;
 
@@ -17,6 +17,7 @@ const QUIESTIONS = [
 
 export function start() {
   startTime = Date.now();
+  openNote();
   const question = QUIESTIONS[0];
   return { question };
 }
