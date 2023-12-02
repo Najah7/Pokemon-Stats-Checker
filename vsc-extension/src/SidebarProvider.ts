@@ -3,6 +3,24 @@ import { getNonce } from "./getNonce";
 import { start } from "./start";
 import { StatsType, calcStats } from "./calcStats";
 import { LANGUAGES, isLanguage, languageList } from "./openNote";
+import { PostType, postRequest } from "./apiRequests";
+
+const mock: PostType = {
+  baseStats: {
+    hp: 10,
+    attack: 10,
+    defense: 10,
+    specialAttack: 10,
+    specialDefense: 10,
+    speed: 10,
+  },
+  userName: "sugiyama",
+  pokemonId: 1,
+  color: {
+    fillColor: "#ff0000",
+    lineColor: "#000000",
+  },
+};
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -25,6 +43,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     webviewView.webview.postMessage({ type: "setup", value: languageList });
 
     let trueAnswer: string;
+    let imgUrl: string;
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
         case "start": {
@@ -55,11 +74,22 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               value: message,
             });
 
-            // // 種族値特徴の近いポケモンを探索
+            // 種族値特徴の近いポケモンを探索
             // getPokemon(h, a, b, c, d, s);
 
-            // // メトリクスをPOST
-            // post(h, a, b, c, d, s);
+            // メトリクスをPOST
+            const res = await postRequest(mock);
+            if (res) {
+              imgUrl = res?.data as string;
+              webviewView.webview.postMessage({
+                type: "fetchedImg",
+                value: imgUrl,
+              });
+              return;
+            } else {
+              vscode.window.showErrorMessage("種族値のPOSTに失敗しました");
+              return;
+            }
           } else {
             webviewView.webview.postMessage({
               type: "uncorrected",
@@ -176,6 +206,11 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               }
               case "uncorrected": {
                 document.getElementById("error").innerText = message.value;
+                break;
+              }
+              case "fetchedImg": {
+                document.getElementById("fetchedImg").style.display = "block";
+                document.getElementById("img").src = message.value;
                 break;
               }
             }
