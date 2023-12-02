@@ -17,7 +17,9 @@ It has a lot of features.
 We are writing about this soon.
 
 ## How to use
-![usage.mp4](usage.mp4)
+![demo movie](https://github.com/Najah7/Pokemon-Stats-Checker/assets/79052634/5fd57658-6de3-483d-94ca-794f03e53d8f)
+
+
 
 ## What is Pokemon Base Stats?
 
