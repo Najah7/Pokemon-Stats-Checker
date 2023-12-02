@@ -98,6 +98,17 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           }
           break;
         }
+        case "copy": {
+          const code = '<img src="' + imgUrl + '" width="300px" />';
+          vscode.env.clipboard.writeText(code);
+          vscode.window.showInformationMessage(`コピーしました \n ${code}`);
+          break;
+        }
+        case "shareX": {
+          const url = `https://twitter.com/intent/tweet?text=あなたは「python界のガルーラ」です%0a%0a&url=https://github.com/najah7/pokemon-stats-checker&hashtags=エンジニア種族値チェッカー`;
+          vscode.env.openExternal(vscode.Uri.parse(url));
+          break;
+        }
         case "onInfo": {
           if (!data.value) {
             return;
@@ -168,6 +179,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         <div style="display: none;" class="ui" id="fetchedImg">
           <p>あなたの種族値</p>
           <img id="img" />
+          <button id="copy">GitHubに貼る</button>
+          <button id="shareX">Xでシェアする</button>
         </div>
         
         <script>
@@ -177,6 +190,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           const startButton = document.getElementById("start");
           const submitButton = document.getElementById("submit");
           const answerInput = document.getElementById("answer");
+          const copyButton = document.getElementById("copy");
+          const shareXButton = document.getElementById("shareX");
 
           window.addEventListener("message", (event) => {
             const message = event.data;
@@ -211,6 +226,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               case "fetchedImg": {
                 document.getElementById("fetchedImg").style.display = "block";
                 document.getElementById("img").src = message.value;
+                document.getElementById("code").innerText = '<img src="' + message.value + '" width="300px" />';
                 break;
               }
             }
