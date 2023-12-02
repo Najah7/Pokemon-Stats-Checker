@@ -136,7 +136,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           break;
         }
         case "shareX": {
-          const url = `https://twitter.com/intent/tweet?text=あなたは「${language}界の${bestPokemon.name}」です%0a%0a&url=https://github.com/najah7/pokemon-stats-checker&hashtags=エンジニア種族値チェッカー,技育キャンプ`;
+          const url = `https://twitter.com/intent/tweet?text=あなたは「${language}界の${bestPokemon.name}」です%0a%0a&url=https://github.com/najah7/pokemon-stats-checker%0a&hashtags=エンジニア種族値チェッカー%0a,技育キャンプ`;
           vscode.env.openExternal(vscode.Uri.parse(url));
           break;
         }
