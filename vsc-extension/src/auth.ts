@@ -1,17 +1,12 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-
-export let userName: string;
-
-export function auth() {
-    vscode.authentication
-    .getSession("github", ["user:name"], {
+export async function auth() {
+  const githubSession = await vscode.authentication.getSession(
+    "github",
+    ["user:name"],
+    {
       createIfNone: true,
-    })
-    .then((res) => {
-      userName = res.account.label;
-      vscode.window.showInformationMessage(
-        `Hello, ${userName}!`
-      );
-    });
+    }
+  );
+  return githubSession.account.label;
 }

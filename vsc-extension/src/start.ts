@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+import { LANGUAGES, openNote } from "./openNote";
 
 export let startTime: number;
 
@@ -15,8 +15,9 @@ const QUIESTIONS = [
   },
 ];
 
-export function start() {
+export function start(language: LANGUAGES) {
   startTime = Date.now();
+  openNote(language);
   const question = QUIESTIONS[0];
   return { question };
 }
