@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { getNonce } from "./getNonce";
 import { userName } from "./extension";
-import { getImageUrl } from "./getImgUrl";
+import { getRequest } from "./apiRequests";
 
 export class ImageProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -23,17 +23,18 @@ export class ImageProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.postMessage({ type: "setup" });
 
+    let imgUrl: string;
     if (!userName) {
       webviewView.webview.postMessage({
         type: "error",
         value: "GitHubでログインしてください",
       });
     } else {
-      const res = await getImageUrl("sugiyama");
-      const imgUrl = await res.data;
-      if (imgUrl) {
+      const res = await getRequest("sugiyama");
+      if (res) {
+        imgUrl = (await res.data) as string;
         webviewView.webview.postMessage({
-          type: "imgUrl",
+          type: "img",
           value: imgUrl,
         });
       } else {
@@ -46,6 +47,20 @@ export class ImageProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
+        case "getImg": {
+          if (!imgUrl) {
+            webviewView.webview.postMessage({
+              type: "error",
+              value: "画像がありません",
+            });
+          } else {
+            webviewView.webview.postMessage({
+              type: "img",
+              value: imgUrl,
+            });
+          }
+          break;
+        }
         case "onInfo": {
           if (!data.value) {
             return;
@@ -95,10 +110,15 @@ export class ImageProvider implements vscode.WebviewViewProvider {
 				<link href="${styleVSCodeUri}" rel="stylesheet">
 			</head>
       <body>
-        <img id="imgUrl" width="150" />
+        <img id="img" />
         <div id="error"></div>
         <script>
           const vscode = acquireVsCodeApi();
+
+          vscode.postMessage({
+            type: "getImg",
+          });
+
           window.addEventListener("message", (event) => {
             const message = event.data;
             switch (message.type) {
@@ -107,8 +127,8 @@ export class ImageProvider implements vscode.WebviewViewProvider {
                 errorMessage.innerText = message.value;
                 break;
               }
-              case "imgUrl": {
-                const img = document.getElementById("imgUrl");
+              case "img": {
+                const img = document.getElementById("img");
                 img.src = message.value;
                 break;
               }
