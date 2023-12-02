@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 
 dotenv.config({ path: path.join(__dirname, ".env") });
+
 const apiKey = process.env.API_KEY;
 
 export async function getRequest<T>(

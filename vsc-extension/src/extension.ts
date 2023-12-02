@@ -4,6 +4,7 @@ import { button } from "./button";
 import { startTime } from "./start";
 import { auth } from "./auth";
 import { SidebarProvider } from "./SidebarProvider";
+import { ImageProvider } from "./ImageProvider";
 
 // 変数定義
 export let previousText: string = "";
@@ -13,12 +14,14 @@ export let specialAttackCount: number = 0;
 export let specialDiffenceCount: number = 0;
 export let currentTextLength: number = 0;
 
-export function activate(context: vscode.ExtensionContext) {
+export let userName: string;
+
+export async function activate(context: vscode.ExtensionContext) {
   // デバッグ
   console.log("activate");
 
   // Githubでログイン
-  auth();
+  userName = await auth();
 
   // ステータスバーにボタンを表示
   context.subscriptions.push(button);
@@ -30,6 +33,15 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.window.registerWebviewViewProvider(
       "base-stats-checker-sidebar",
       sidebarProvider
+    )
+  );
+
+  // ImageProviderの登録
+  const imageProvider = new ImageProvider(context.extensionUri);
+  context.subscriptions.push(
+    vscode.window.registerWebviewViewProvider(
+      "base-stats-checker-image",
+      imageProvider
     )
   );
 
