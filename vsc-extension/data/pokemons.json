@@ -1,13 +1,13 @@
 [
   {
-    "id": 1,
+    "pokemonId": 1,
     "name": "フシギダネ",
-    "stats": {
+    "baseStats": {
       "hp": 45,
       "attack": 49,
       "defense": 49,
-      "special-attack": 65,
-      "special-defense": 65,
+      "specialAttack": 65,
+      "specialDefense": 65,
       "speed": 45
     },
     "color": {
@@ -16,14 +16,14 @@
     }
   },
   {
-    "id": 2,
+    "pokemonId": 2,
     "name": "フシギソウ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 62,
       "defense": 63,
-      "special-attack": 80,
-      "special-defense": 80,
+      "specialAttack": 80,
+      "specialDefense": 80,
       "speed": 60
     },
     "color": {
@@ -32,14 +32,14 @@
     }
   },
   {
-    "id": 3,
+    "pokemonId": 3,
     "name": "フシギバナ",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 82,
       "defense": 83,
-      "special-attack": 100,
-      "special-defense": 100,
+      "specialAttack": 100,
+      "specialDefense": 100,
       "speed": 80
     },
     "color": {
@@ -48,14 +48,14 @@
     }
   },
   {
-    "id": 4,
+    "pokemonId": 4,
     "name": "ヒトカゲ",
-    "stats": {
+    "baseStats": {
       "hp": 39,
       "attack": 52,
       "defense": 43,
-      "special-attack": 60,
-      "special-defense": 50,
+      "specialAttack": 60,
+      "specialDefense": 50,
       "speed": 65
     },
     "color": {
@@ -64,14 +64,14 @@
     }
   },
   {
-    "id": 5,
+    "pokemonId": 5,
     "name": "リザード",
-    "stats": {
+    "baseStats": {
       "hp": 58,
       "attack": 64,
       "defense": 58,
-      "special-attack": 80,
-      "special-defense": 65,
+      "specialAttack": 80,
+      "specialDefense": 65,
       "speed": 80
     },
     "color": {
@@ -80,14 +80,14 @@
     }
   },
   {
-    "id": 6,
+    "pokemonId": 6,
     "name": "リザードン",
-    "stats": {
+    "baseStats": {
       "hp": 78,
       "attack": 84,
       "defense": 78,
-      "special-attack": 109,
-      "special-defense": 85,
+      "specialAttack": 109,
+      "specialDefense": 85,
       "speed": 100
     },
     "color": {
@@ -96,14 +96,14 @@
     }
   },
   {
-    "id": 7,
+    "pokemonId": 7,
     "name": "ゼニガメ",
-    "stats": {
+    "baseStats": {
       "hp": 44,
       "attack": 48,
       "defense": 65,
-      "special-attack": 50,
-      "special-defense": 64,
+      "specialAttack": 50,
+      "specialDefense": 64,
       "speed": 43
     },
     "color": {
@@ -112,14 +112,14 @@
     }
   },
   {
-    "id": 8,
+    "pokemonId": 8,
     "name": "カメール",
-    "stats": {
+    "baseStats": {
       "hp": 59,
       "attack": 63,
       "defense": 80,
-      "special-attack": 65,
-      "special-defense": 80,
+      "specialAttack": 65,
+      "specialDefense": 80,
       "speed": 58
     },
     "color": {
@@ -128,14 +128,14 @@
     }
   },
   {
-    "id": 9,
+    "pokemonId": 9,
     "name": "カメックス",
-    "stats": {
+    "baseStats": {
       "hp": 79,
       "attack": 83,
       "defense": 100,
-      "special-attack": 85,
-      "special-defense": 105,
+      "specialAttack": 85,
+      "specialDefense": 105,
       "speed": 78
     },
     "color": {
@@ -144,14 +144,14 @@
     }
   },
   {
-    "id": 10,
+    "pokemonId": 10,
     "name": "キャタピー",
-    "stats": {
+    "baseStats": {
       "hp": 45,
       "attack": 30,
       "defense": 35,
-      "special-attack": 20,
-      "special-defense": 20,
+      "specialAttack": 20,
+      "specialDefense": 20,
       "speed": 45
     },
     "color": {
@@ -160,14 +160,14 @@
     }
   },
   {
-    "id": 11,
+    "pokemonId": 11,
     "name": "トランセル",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 20,
       "defense": 55,
-      "special-attack": 25,
-      "special-defense": 25,
+      "specialAttack": 25,
+      "specialDefense": 25,
       "speed": 30
     },
     "color": {
@@ -176,14 +176,14 @@
     }
   },
   {
-    "id": 12,
+    "pokemonId": 12,
     "name": "バタフリー",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 45,
       "defense": 50,
-      "special-attack": 90,
-      "special-defense": 80,
+      "specialAttack": 90,
+      "specialDefense": 80,
       "speed": 70
     },
     "color": {
@@ -192,14 +192,14 @@
     }
   },
   {
-    "id": 13,
+    "pokemonId": 13,
     "name": "ビードル",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 35,
       "defense": 30,
-      "special-attack": 20,
-      "special-defense": 20,
+      "specialAttack": 20,
+      "specialDefense": 20,
       "speed": 50
     },
     "color": {
@@ -208,14 +208,14 @@
     }
   },
   {
-    "id": 14,
+    "pokemonId": 14,
     "name": "コクーン",
-    "stats": {
+    "baseStats": {
       "hp": 45,
       "attack": 25,
       "defense": 50,
-      "special-attack": 25,
-      "special-defense": 25,
+      "specialAttack": 25,
+      "specialDefense": 25,
       "speed": 35
     },
     "color": {
@@ -224,14 +224,14 @@
     }
   },
   {
-    "id": 15,
+    "pokemonId": 15,
     "name": "スピアー",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 90,
       "defense": 40,
-      "special-attack": 45,
-      "special-defense": 80,
+      "specialAttack": 45,
+      "specialDefense": 80,
       "speed": 75
     },
     "color": {
@@ -240,14 +240,14 @@
     }
   },
   {
-    "id": 16,
+    "pokemonId": 16,
     "name": "ポッポ",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 45,
       "defense": 40,
-      "special-attack": 35,
-      "special-defense": 35,
+      "specialAttack": 35,
+      "specialDefense": 35,
       "speed": 56
     },
     "color": {
@@ -256,14 +256,14 @@
     }
   },
   {
-    "id": 17,
+    "pokemonId": 17,
     "name": "ピジョン",
-    "stats": {
+    "baseStats": {
       "hp": 63,
       "attack": 60,
       "defense": 55,
-      "special-attack": 50,
-      "special-defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
       "speed": 71
     },
     "color": {
@@ -272,14 +272,14 @@
     }
   },
   {
-    "id": 18,
+    "pokemonId": 18,
     "name": "ピジョット",
-    "stats": {
+    "baseStats": {
       "hp": 83,
       "attack": 80,
       "defense": 75,
-      "special-attack": 70,
-      "special-defense": 70,
+      "specialAttack": 70,
+      "specialDefense": 70,
       "speed": 101
     },
     "color": {
@@ -288,14 +288,14 @@
     }
   },
   {
-    "id": 19,
+    "pokemonId": 19,
     "name": "コラッタ",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 56,
       "defense": 35,
-      "special-attack": 25,
-      "special-defense": 35,
+      "specialAttack": 25,
+      "specialDefense": 35,
       "speed": 72
     },
     "color": {
@@ -304,14 +304,14 @@
     }
   },
   {
-    "id": 20,
+    "pokemonId": 20,
     "name": "ラッタ",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 81,
       "defense": 60,
-      "special-attack": 50,
-      "special-defense": 70,
+      "specialAttack": 50,
+      "specialDefense": 70,
       "speed": 97
     },
     "color": {
@@ -320,14 +320,14 @@
     }
   },
   {
-    "id": 21,
+    "pokemonId": 21,
     "name": "オニスズメ",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 60,
       "defense": 30,
-      "special-attack": 31,
-      "special-defense": 31,
+      "specialAttack": 31,
+      "specialDefense": 31,
       "speed": 70
     },
     "color": {
@@ -336,14 +336,14 @@
     }
   },
   {
-    "id": 22,
+    "pokemonId": 22,
     "name": "オニドリル",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 90,
       "defense": 65,
-      "special-attack": 61,
-      "special-defense": 61,
+      "specialAttack": 61,
+      "specialDefense": 61,
       "speed": 100
     },
     "color": {
@@ -352,14 +352,14 @@
     }
   },
   {
-    "id": 23,
+    "pokemonId": 23,
     "name": "アーボ",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 60,
       "defense": 44,
-      "special-attack": 40,
-      "special-defense": 54,
+      "specialAttack": 40,
+      "specialDefense": 54,
       "speed": 55
     },
     "color": {
@@ -368,14 +368,14 @@
     }
   },
   {
-    "id": 24,
+    "pokemonId": 24,
     "name": "アーボック",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 95,
       "defense": 69,
-      "special-attack": 65,
-      "special-defense": 79,
+      "specialAttack": 65,
+      "specialDefense": 79,
       "speed": 80
     },
     "color": {
@@ -384,14 +384,14 @@
     }
   },
   {
-    "id": 25,
+    "pokemonId": 25,
     "name": "ピカチュウ",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 55,
       "defense": 40,
-      "special-attack": 50,
-      "special-defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
       "speed": 90
     },
     "color": {
@@ -400,14 +400,14 @@
     }
   },
   {
-    "id": 26,
+    "pokemonId": 26,
     "name": "ライチュウ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 90,
       "defense": 55,
-      "special-attack": 90,
-      "special-defense": 80,
+      "specialAttack": 90,
+      "specialDefense": 80,
       "speed": 110
     },
     "color": {
@@ -416,14 +416,14 @@
     }
   },
   {
-    "id": 27,
+    "pokemonId": 27,
     "name": "サンド",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 75,
       "defense": 85,
-      "special-attack": 20,
-      "special-defense": 30,
+      "specialAttack": 20,
+      "specialDefense": 30,
       "speed": 40
     },
     "color": {
@@ -432,14 +432,14 @@
     }
   },
   {
-    "id": 28,
+    "pokemonId": 28,
     "name": "サンドパン",
-    "stats": {
+    "baseStats": {
       "hp": 75,
       "attack": 100,
       "defense": 110,
-      "special-attack": 45,
-      "special-defense": 55,
+      "specialAttack": 45,
+      "specialDefense": 55,
       "speed": 65
     },
     "color": {
@@ -448,14 +448,14 @@
     }
   },
   {
-    "id": 30,
+    "pokemonId": 30,
     "name": "ニドリーナ",
-    "stats": {
+    "baseStats": {
       "hp": 70,
       "attack": 62,
       "defense": 67,
-      "special-attack": 55,
-      "special-defense": 55,
+      "specialAttack": 55,
+      "specialDefense": 55,
       "speed": 56
     },
     "color": {
@@ -464,14 +464,14 @@
     }
   },
   {
-    "id": 31,
+    "pokemonId": 31,
     "name": "ニドクイン",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 92,
       "defense": 87,
-      "special-attack": 75,
-      "special-defense": 85,
+      "specialAttack": 75,
+      "specialDefense": 85,
       "speed": 76
     },
     "color": {
@@ -480,14 +480,14 @@
     }
   },
   {
-    "id": 33,
+    "pokemonId": 33,
     "name": "ニドリーノ",
-    "stats": {
+    "baseStats": {
       "hp": 61,
       "attack": 72,
       "defense": 57,
-      "special-attack": 55,
-      "special-defense": 55,
+      "specialAttack": 55,
+      "specialDefense": 55,
       "speed": 65
     },
     "color": {
@@ -496,14 +496,14 @@
     }
   },
   {
-    "id": 34,
+    "pokemonId": 34,
     "name": "ニドキング",
-    "stats": {
+    "baseStats": {
       "hp": 81,
       "attack": 102,
       "defense": 77,
-      "special-attack": 85,
-      "special-defense": 75,
+      "specialAttack": 85,
+      "specialDefense": 75,
       "speed": 85
     },
     "color": {
@@ -512,14 +512,14 @@
     }
   },
   {
-    "id": 35,
+    "pokemonId": 35,
     "name": "ピッピ",
-    "stats": {
+    "baseStats": {
       "hp": 70,
       "attack": 45,
       "defense": 48,
-      "special-attack": 60,
-      "special-defense": 65,
+      "specialAttack": 60,
+      "specialDefense": 65,
       "speed": 35
     },
     "color": {
@@ -528,14 +528,14 @@
     }
   },
   {
-    "id": 36,
+    "pokemonId": 36,
     "name": "ピクシー",
-    "stats": {
+    "baseStats": {
       "hp": 95,
       "attack": 70,
       "defense": 73,
-      "special-attack": 95,
-      "special-defense": 90,
+      "specialAttack": 95,
+      "specialDefense": 90,
       "speed": 60
     },
     "color": {
@@ -544,14 +544,14 @@
     }
   },
   {
-    "id": 37,
+    "pokemonId": 37,
     "name": "ロコン",
-    "stats": {
+    "baseStats": {
       "hp": 38,
       "attack": 41,
       "defense": 40,
-      "special-attack": 50,
-      "special-defense": 65,
+      "specialAttack": 50,
+      "specialDefense": 65,
       "speed": 65
     },
     "color": {
@@ -560,14 +560,14 @@
     }
   },
   {
-    "id": 38,
+    "pokemonId": 38,
     "name": "キュウコン",
-    "stats": {
+    "baseStats": {
       "hp": 73,
       "attack": 76,
       "defense": 75,
-      "special-attack": 81,
-      "special-defense": 100,
+      "specialAttack": 81,
+      "specialDefense": 100,
       "speed": 100
     },
     "color": {
@@ -576,14 +576,14 @@
     }
   },
   {
-    "id": 39,
+    "pokemonId": 39,
     "name": "プリン",
-    "stats": {
+    "baseStats": {
       "hp": 115,
       "attack": 45,
       "defense": 20,
-      "special-attack": 45,
-      "special-defense": 25,
+      "specialAttack": 45,
+      "specialDefense": 25,
       "speed": 20
     },
     "color": {
@@ -592,14 +592,14 @@
     }
   },
   {
-    "id": 40,
+    "pokemonId": 40,
     "name": "プクリン",
-    "stats": {
+    "baseStats": {
       "hp": 140,
       "attack": 70,
       "defense": 45,
-      "special-attack": 85,
-      "special-defense": 50,
+      "specialAttack": 85,
+      "specialDefense": 50,
       "speed": 45
     },
     "color": {
@@ -608,14 +608,14 @@
     }
   },
   {
-    "id": 41,
+    "pokemonId": 41,
     "name": "ズバット",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 45,
       "defense": 35,
-      "special-attack": 30,
-      "special-defense": 40,
+      "specialAttack": 30,
+      "specialDefense": 40,
       "speed": 55
     },
     "color": {
@@ -624,14 +624,14 @@
     }
   },
   {
-    "id": 42,
+    "pokemonId": 42,
     "name": "ゴルバット",
-    "stats": {
+    "baseStats": {
       "hp": 75,
       "attack": 80,
       "defense": 70,
-      "special-attack": 65,
-      "special-defense": 75,
+      "specialAttack": 65,
+      "specialDefense": 75,
       "speed": 90
     },
     "color": {
@@ -640,14 +640,14 @@
     }
   },
   {
-    "id": 43,
+    "pokemonId": 43,
     "name": "ナゾノクサ",
-    "stats": {
+    "baseStats": {
       "hp": 45,
       "attack": 50,
       "defense": 55,
-      "special-attack": 75,
-      "special-defense": 65,
+      "specialAttack": 75,
+      "specialDefense": 65,
       "speed": 30
     },
     "color": {
@@ -656,14 +656,14 @@
     }
   },
   {
-    "id": 44,
+    "pokemonId": 44,
     "name": "クサイハナ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 65,
       "defense": 70,
-      "special-attack": 85,
-      "special-defense": 75,
+      "specialAttack": 85,
+      "specialDefense": 75,
       "speed": 40
     },
     "color": {
@@ -672,14 +672,14 @@
     }
   },
   {
-    "id": 45,
+    "pokemonId": 45,
     "name": "ラフレシア",
-    "stats": {
+    "baseStats": {
       "hp": 75,
       "attack": 80,
       "defense": 85,
-      "special-attack": 110,
-      "special-defense": 90,
+      "specialAttack": 110,
+      "specialDefense": 90,
       "speed": 50
     },
     "color": {
@@ -688,14 +688,14 @@
     }
   },
   {
-    "id": 46,
+    "pokemonId": 46,
     "name": "パラス",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 70,
       "defense": 55,
-      "special-attack": 45,
-      "special-defense": 55,
+      "specialAttack": 45,
+      "specialDefense": 55,
       "speed": 25
     },
     "color": {
@@ -704,14 +704,14 @@
     }
   },
   {
-    "id": 47,
+    "pokemonId": 47,
     "name": "パラセクト",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 95,
       "defense": 80,
-      "special-attack": 60,
-      "special-defense": 80,
+      "specialAttack": 60,
+      "specialDefense": 80,
       "speed": 30
     },
     "color": {
@@ -720,14 +720,14 @@
     }
   },
   {
-    "id": 48,
+    "pokemonId": 48,
     "name": "コンパン",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 55,
       "defense": 50,
-      "special-attack": 40,
-      "special-defense": 55,
+      "specialAttack": 40,
+      "specialDefense": 55,
       "speed": 45
     },
     "color": {
@@ -736,14 +736,14 @@
     }
   },
   {
-    "id": 49,
+    "pokemonId": 49,
     "name": "モルフォン",
-    "stats": {
+    "baseStats": {
       "hp": 70,
       "attack": 65,
       "defense": 60,
-      "special-attack": 90,
-      "special-defense": 75,
+      "specialAttack": 90,
+      "specialDefense": 75,
       "speed": 90
     },
     "color": {
@@ -752,14 +752,14 @@
     }
   },
   {
-    "id": 50,
+    "pokemonId": 50,
     "name": "ディグダ",
-    "stats": {
+    "baseStats": {
       "hp": 10,
       "attack": 55,
       "defense": 25,
-      "special-attack": 35,
-      "special-defense": 45,
+      "specialAttack": 35,
+      "specialDefense": 45,
       "speed": 95
     },
     "color": {
@@ -768,14 +768,14 @@
     }
   },
   {
-    "id": 51,
+    "pokemonId": 51,
     "name": "ダグトリオ",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 100,
       "defense": 50,
-      "special-attack": 50,
-      "special-defense": 70,
+      "specialAttack": 50,
+      "specialDefense": 70,
       "speed": 120
     },
     "color": {
@@ -784,14 +784,14 @@
     }
   },
   {
-    "id": 52,
+    "pokemonId": 52,
     "name": "ニャース",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 45,
       "defense": 35,
-      "special-attack": 40,
-      "special-defense": 40,
+      "specialAttack": 40,
+      "specialDefense": 40,
       "speed": 90
     },
     "color": {
@@ -800,14 +800,14 @@
     }
   },
   {
-    "id": 53,
+    "pokemonId": 53,
     "name": "ペルシアン",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 70,
       "defense": 60,
-      "special-attack": 65,
-      "special-defense": 65,
+      "specialAttack": 65,
+      "specialDefense": 65,
       "speed": 115
     },
     "color": {
@@ -816,14 +816,14 @@
     }
   },
   {
-    "id": 54,
+    "pokemonId": 54,
     "name": "コダック",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 52,
       "defense": 48,
-      "special-attack": 65,
-      "special-defense": 50,
+      "specialAttack": 65,
+      "specialDefense": 50,
       "speed": 55
     },
     "color": {
@@ -832,14 +832,14 @@
     }
   },
   {
-    "id": 55,
+    "pokemonId": 55,
     "name": "ゴルダック",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 82,
       "defense": 78,
-      "special-attack": 95,
-      "special-defense": 80,
+      "specialAttack": 95,
+      "specialDefense": 80,
       "speed": 85
     },
     "color": {
@@ -848,14 +848,14 @@
     }
   },
   {
-    "id": 56,
+    "pokemonId": 56,
     "name": "マンキー",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 80,
       "defense": 35,
-      "special-attack": 35,
-      "special-defense": 45,
+      "specialAttack": 35,
+      "specialDefense": 45,
       "speed": 70
     },
     "color": {
@@ -864,14 +864,14 @@
     }
   },
   {
-    "id": 57,
+    "pokemonId": 57,
     "name": "オコリザル",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 105,
       "defense": 60,
-      "special-attack": 60,
-      "special-defense": 70,
+      "specialAttack": 60,
+      "specialDefense": 70,
       "speed": 95
     },
     "color": {
@@ -880,14 +880,14 @@
     }
   },
   {
-    "id": 58,
+    "pokemonId": 58,
     "name": "ガーディ",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 70,
       "defense": 45,
-      "special-attack": 70,
-      "special-defense": 50,
+      "specialAttack": 70,
+      "specialDefense": 50,
       "speed": 60
     },
     "color": {
@@ -896,14 +896,14 @@
     }
   },
   {
-    "id": 59,
+    "pokemonId": 59,
     "name": "ウインディ",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 110,
       "defense": 80,
-      "special-attack": 100,
-      "special-defense": 80,
+      "specialAttack": 100,
+      "specialDefense": 80,
       "speed": 95
     },
     "color": {
@@ -912,14 +912,14 @@
     }
   },
   {
-    "id": 60,
+    "pokemonId": 60,
     "name": "ニョロモ",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 50,
       "defense": 40,
-      "special-attack": 40,
-      "special-defense": 40,
+      "specialAttack": 40,
+      "specialDefense": 40,
       "speed": 90
     },
     "color": {
@@ -928,14 +928,14 @@
     }
   },
   {
-    "id": 61,
+    "pokemonId": 61,
     "name": "ニョロゾ",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 65,
       "defense": 65,
-      "special-attack": 50,
-      "special-defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
       "speed": 90
     },
     "color": {
@@ -944,14 +944,14 @@
     }
   },
   {
-    "id": 62,
+    "pokemonId": 62,
     "name": "ニョロボン",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 95,
       "defense": 95,
-      "special-attack": 70,
-      "special-defense": 90,
+      "specialAttack": 70,
+      "specialDefense": 90,
       "speed": 70
     },
     "color": {
@@ -960,14 +960,14 @@
     }
   },
   {
-    "id": 63,
+    "pokemonId": 63,
     "name": "ケーシィ",
-    "stats": {
+    "baseStats": {
       "hp": 25,
       "attack": 20,
       "defense": 15,
-      "special-attack": 105,
-      "special-defense": 55,
+      "specialAttack": 105,
+      "specialDefense": 55,
       "speed": 90
     },
     "color": {
@@ -976,14 +976,14 @@
     }
   },
   {
-    "id": 64,
+    "pokemonId": 64,
     "name": "ユンゲラー",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 35,
       "defense": 30,
-      "special-attack": 120,
-      "special-defense": 70,
+      "specialAttack": 120,
+      "specialDefense": 70,
       "speed": 105
     },
     "color": {
@@ -992,14 +992,14 @@
     }
   },
   {
-    "id": 65,
+    "pokemonId": 65,
     "name": "フーディン",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 50,
       "defense": 45,
-      "special-attack": 135,
-      "special-defense": 95,
+      "specialAttack": 135,
+      "specialDefense": 95,
       "speed": 120
     },
     "color": {
@@ -1008,14 +1008,14 @@
     }
   },
   {
-    "id": 66,
+    "pokemonId": 66,
     "name": "ワンリキー",
-    "stats": {
+    "baseStats": {
       "hp": 70,
       "attack": 80,
       "defense": 50,
-      "special-attack": 35,
-      "special-defense": 35,
+      "specialAttack": 35,
+      "specialDefense": 35,
       "speed": 35
     },
     "color": {
@@ -1024,14 +1024,14 @@
     }
   },
   {
-    "id": 67,
+    "pokemonId": 67,
     "name": "ゴーリキー",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 100,
       "defense": 70,
-      "special-attack": 50,
-      "special-defense": 60,
+      "specialAttack": 50,
+      "specialDefense": 60,
       "speed": 45
     },
     "color": {
@@ -1040,14 +1040,14 @@
     }
   },
   {
-    "id": 68,
+    "pokemonId": 68,
     "name": "カイリキー",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 130,
       "defense": 80,
-      "special-attack": 65,
-      "special-defense": 85,
+      "specialAttack": 65,
+      "specialDefense": 85,
       "speed": 55
     },
     "color": {
@@ -1056,14 +1056,14 @@
     }
   },
   {
-    "id": 69,
+    "pokemonId": 69,
     "name": "マダツボミ",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 75,
       "defense": 35,
-      "special-attack": 70,
-      "special-defense": 30,
+      "specialAttack": 70,
+      "specialDefense": 30,
       "speed": 40
     },
     "color": {
@@ -1072,14 +1072,14 @@
     }
   },
   {
-    "id": 70,
+    "pokemonId": 70,
     "name": "ウツドン",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 90,
       "defense": 50,
-      "special-attack": 85,
-      "special-defense": 45,
+      "specialAttack": 85,
+      "specialDefense": 45,
       "speed": 55
     },
     "color": {
@@ -1088,14 +1088,14 @@
     }
   },
   {
-    "id": 71,
+    "pokemonId": 71,
     "name": "ウツボット",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 105,
       "defense": 65,
-      "special-attack": 100,
-      "special-defense": 70,
+      "specialAttack": 100,
+      "specialDefense": 70,
       "speed": 70
     },
     "color": {
@@ -1104,14 +1104,14 @@
     }
   },
   {
-    "id": 72,
+    "pokemonId": 72,
     "name": "メノクラゲ",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 40,
       "defense": 35,
-      "special-attack": 50,
-      "special-defense": 100,
+      "specialAttack": 50,
+      "specialDefense": 100,
       "speed": 70
     },
     "color": {
@@ -1120,14 +1120,14 @@
     }
   },
   {
-    "id": 73,
+    "pokemonId": 73,
     "name": "ドククラゲ",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 70,
       "defense": 65,
-      "special-attack": 80,
-      "special-defense": 120,
+      "specialAttack": 80,
+      "specialDefense": 120,
       "speed": 100
     },
     "color": {
@@ -1136,14 +1136,14 @@
     }
   },
   {
-    "id": 74,
+    "pokemonId": 74,
     "name": "イシツブテ",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 80,
       "defense": 100,
-      "special-attack": 30,
-      "special-defense": 30,
+      "specialAttack": 30,
+      "specialDefense": 30,
       "speed": 20
     },
     "color": {
@@ -1152,14 +1152,14 @@
     }
   },
   {
-    "id": 75,
+    "pokemonId": 75,
     "name": "ゴローン",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 95,
       "defense": 115,
-      "special-attack": 45,
-      "special-defense": 45,
+      "specialAttack": 45,
+      "specialDefense": 45,
       "speed": 35
     },
     "color": {
@@ -1168,14 +1168,14 @@
     }
   },
   {
-    "id": 76,
+    "pokemonId": 76,
     "name": "ゴローニャ",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 120,
       "defense": 130,
-      "special-attack": 55,
-      "special-defense": 65,
+      "specialAttack": 55,
+      "specialDefense": 65,
       "speed": 45
     },
     "color": {
@@ -1184,14 +1184,14 @@
     }
   },
   {
-    "id": 77,
+    "pokemonId": 77,
     "name": "ポニータ",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 85,
       "defense": 55,
-      "special-attack": 65,
-      "special-defense": 65,
+      "specialAttack": 65,
+      "specialDefense": 65,
       "speed": 90
     },
     "color": {
@@ -1200,14 +1200,14 @@
     }
   },
   {
-    "id": 78,
+    "pokemonId": 78,
     "name": "ギャロップ",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 100,
       "defense": 70,
-      "special-attack": 80,
-      "special-defense": 80,
+      "specialAttack": 80,
+      "specialDefense": 80,
       "speed": 105
     },
     "color": {
@@ -1216,14 +1216,14 @@
     }
   },
   {
-    "id": 79,
+    "pokemonId": 79,
     "name": "ヤドン",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 65,
       "defense": 65,
-      "special-attack": 40,
-      "special-defense": 40,
+      "specialAttack": 40,
+      "specialDefense": 40,
       "speed": 15
     },
     "color": {
@@ -1232,14 +1232,14 @@
     }
   },
   {
-    "id": 80,
+    "pokemonId": 80,
     "name": "ヤドラン",
-    "stats": {
+    "baseStats": {
       "hp": 95,
       "attack": 75,
       "defense": 110,
-      "special-attack": 100,
-      "special-defense": 80,
+      "specialAttack": 100,
+      "specialDefense": 80,
       "speed": 30
     },
     "color": {
@@ -1248,14 +1248,14 @@
     }
   },
   {
-    "id": 81,
+    "pokemonId": 81,
     "name": "コイル",
-    "stats": {
+    "baseStats": {
       "hp": 25,
       "attack": 35,
       "defense": 70,
-      "special-attack": 95,
-      "special-defense": 55,
+      "specialAttack": 95,
+      "specialDefense": 55,
       "speed": 45
     },
     "color": {
@@ -1264,14 +1264,14 @@
     }
   },
   {
-    "id": 82,
+    "pokemonId": 82,
     "name": "レアコイル",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 60,
       "defense": 95,
-      "special-attack": 120,
-      "special-defense": 70,
+      "specialAttack": 120,
+      "specialDefense": 70,
       "speed": 70
     },
     "color": {
@@ -1280,14 +1280,14 @@
     }
   },
   {
-    "id": 83,
+    "pokemonId": 83,
     "name": "カモネギ",
-    "stats": {
+    "baseStats": {
       "hp": 52,
       "attack": 90,
       "defense": 55,
-      "special-attack": 58,
-      "special-defense": 62,
+      "specialAttack": 58,
+      "specialDefense": 62,
       "speed": 60
     },
     "color": {
@@ -1296,14 +1296,14 @@
     }
   },
   {
-    "id": 84,
+    "pokemonId": 84,
     "name": "ドードー",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 85,
       "defense": 45,
-      "special-attack": 35,
-      "special-defense": 35,
+      "specialAttack": 35,
+      "specialDefense": 35,
       "speed": 75
     },
     "color": {
@@ -1312,14 +1312,14 @@
     }
   },
   {
-    "id": 85,
+    "pokemonId": 85,
     "name": "ドードリオ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 110,
       "defense": 70,
-      "special-attack": 60,
-      "special-defense": 60,
+      "specialAttack": 60,
+      "specialDefense": 60,
       "speed": 110
     },
     "color": {
@@ -1328,14 +1328,14 @@
     }
   },
   {
-    "id": 86,
+    "pokemonId": 86,
     "name": "パウワウ",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 45,
       "defense": 55,
-      "special-attack": 45,
-      "special-defense": 70,
+      "specialAttack": 45,
+      "specialDefense": 70,
       "speed": 45
     },
     "color": {
@@ -1344,14 +1344,14 @@
     }
   },
   {
-    "id": 87,
+    "pokemonId": 87,
     "name": "ジュゴン",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 70,
       "defense": 80,
-      "special-attack": 70,
-      "special-defense": 95,
+      "specialAttack": 70,
+      "specialDefense": 95,
       "speed": 70
     },
     "color": {
@@ -1360,14 +1360,14 @@
     }
   },
   {
-    "id": 88,
+    "pokemonId": 88,
     "name": "ベトベター",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 80,
       "defense": 50,
-      "special-attack": 40,
-      "special-defense": 50,
+      "specialAttack": 40,
+      "specialDefense": 50,
       "speed": 25
     },
     "color": {
@@ -1376,14 +1376,14 @@
     }
   },
   {
-    "id": 89,
+    "pokemonId": 89,
     "name": "ベトベトン",
-    "stats": {
+    "baseStats": {
       "hp": 105,
       "attack": 105,
       "defense": 75,
-      "special-attack": 65,
-      "special-defense": 100,
+      "specialAttack": 65,
+      "specialDefense": 100,
       "speed": 50
     },
     "color": {
@@ -1392,14 +1392,14 @@
     }
   },
   {
-    "id": 90,
+    "pokemonId": 90,
     "name": "シェルダー",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 65,
       "defense": 100,
-      "special-attack": 45,
-      "special-defense": 25,
+      "specialAttack": 45,
+      "specialDefense": 25,
       "speed": 40
     },
     "color": {
@@ -1408,14 +1408,14 @@
     }
   },
   {
-    "id": 91,
+    "pokemonId": 91,
     "name": "パルシェン",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 95,
       "defense": 180,
-      "special-attack": 85,
-      "special-defense": 45,
+      "specialAttack": 85,
+      "specialDefense": 45,
       "speed": 70
     },
     "color": {
@@ -1424,14 +1424,14 @@
     }
   },
   {
-    "id": 92,
+    "pokemonId": 92,
     "name": "ゴース",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 35,
       "defense": 30,
-      "special-attack": 100,
-      "special-defense": 35,
+      "specialAttack": 100,
+      "specialDefense": 35,
       "speed": 80
     },
     "color": {
@@ -1440,14 +1440,14 @@
     }
   },
   {
-    "id": 93,
+    "pokemonId": 93,
     "name": "ゴースト",
-    "stats": {
+    "baseStats": {
       "hp": 45,
       "attack": 50,
       "defense": 45,
-      "special-attack": 115,
-      "special-defense": 55,
+      "specialAttack": 115,
+      "specialDefense": 55,
       "speed": 95
     },
     "color": {
@@ -1456,14 +1456,14 @@
     }
   },
   {
-    "id": 94,
+    "pokemonId": 94,
     "name": "ゲンガー",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 65,
       "defense": 60,
-      "special-attack": 130,
-      "special-defense": 75,
+      "specialAttack": 130,
+      "specialDefense": 75,
       "speed": 110
     },
     "color": {
@@ -1472,14 +1472,14 @@
     }
   },
   {
-    "id": 95,
+    "pokemonId": 95,
     "name": "イワーク",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 45,
       "defense": 160,
-      "special-attack": 30,
-      "special-defense": 45,
+      "specialAttack": 30,
+      "specialDefense": 45,
       "speed": 70
     },
     "color": {
@@ -1488,14 +1488,14 @@
     }
   },
   {
-    "id": 96,
+    "pokemonId": 96,
     "name": "スリープ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 48,
       "defense": 45,
-      "special-attack": 43,
-      "special-defense": 90,
+      "specialAttack": 43,
+      "specialDefense": 90,
       "speed": 42
     },
     "color": {
@@ -1504,14 +1504,14 @@
     }
   },
   {
-    "id": 97,
+    "pokemonId": 97,
     "name": "スリーパー",
-    "stats": {
+    "baseStats": {
       "hp": 85,
       "attack": 73,
       "defense": 70,
-      "special-attack": 73,
-      "special-defense": 115,
+      "specialAttack": 73,
+      "specialDefense": 115,
       "speed": 67
     },
     "color": {
@@ -1520,14 +1520,14 @@
     }
   },
   {
-    "id": 98,
+    "pokemonId": 98,
     "name": "クラブ",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 105,
       "defense": 90,
-      "special-attack": 25,
-      "special-defense": 25,
+      "specialAttack": 25,
+      "specialDefense": 25,
       "speed": 50
     },
     "color": {
@@ -1536,14 +1536,14 @@
     }
   },
   {
-    "id": 99,
+    "pokemonId": 99,
     "name": "キングラー",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 130,
       "defense": 115,
-      "special-attack": 50,
-      "special-defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
       "speed": 75
     },
     "color": {
@@ -1552,14 +1552,14 @@
     }
   },
   {
-    "id": 100,
+    "pokemonId": 100,
     "name": "ビリリダマ",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 30,
       "defense": 50,
-      "special-attack": 55,
-      "special-defense": 55,
+      "specialAttack": 55,
+      "specialDefense": 55,
       "speed": 100
     },
     "color": {
@@ -1568,14 +1568,14 @@
     }
   },
   {
-    "id": 101,
+    "pokemonId": 101,
     "name": "マルマイン",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 50,
       "defense": 70,
-      "special-attack": 80,
-      "special-defense": 80,
+      "specialAttack": 80,
+      "specialDefense": 80,
       "speed": 150
     },
     "color": {
@@ -1584,14 +1584,14 @@
     }
   },
   {
-    "id": 102,
+    "pokemonId": 102,
     "name": "タマタマ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 40,
       "defense": 80,
-      "special-attack": 60,
-      "special-defense": 45,
+      "specialAttack": 60,
+      "specialDefense": 45,
       "speed": 40
     },
     "color": {
@@ -1600,14 +1600,14 @@
     }
   },
   {
-    "id": 103,
+    "pokemonId": 103,
     "name": "ナッシー",
-    "stats": {
+    "baseStats": {
       "hp": 95,
       "attack": 95,
       "defense": 85,
-      "special-attack": 125,
-      "special-defense": 75,
+      "specialAttack": 125,
+      "specialDefense": 75,
       "speed": 55
     },
     "color": {
@@ -1616,14 +1616,14 @@
     }
   },
   {
-    "id": 104,
+    "pokemonId": 104,
     "name": "カラカラ",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 50,
       "defense": 95,
-      "special-attack": 40,
-      "special-defense": 50,
+      "specialAttack": 40,
+      "specialDefense": 50,
       "speed": 35
     },
     "color": {
@@ -1632,14 +1632,14 @@
     }
   },
   {
-    "id": 105,
+    "pokemonId": 105,
     "name": "ガラガラ",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 80,
       "defense": 110,
-      "special-attack": 50,
-      "special-defense": 80,
+      "specialAttack": 50,
+      "specialDefense": 80,
       "speed": 45
     },
     "color": {
@@ -1648,14 +1648,14 @@
     }
   },
   {
-    "id": 106,
+    "pokemonId": 106,
     "name": "サワムラー",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 120,
       "defense": 53,
-      "special-attack": 35,
-      "special-defense": 110,
+      "specialAttack": 35,
+      "specialDefense": 110,
       "speed": 87
     },
     "color": {
@@ -1664,14 +1664,14 @@
     }
   },
   {
-    "id": 107,
+    "pokemonId": 107,
     "name": "エビワラー",
-    "stats": {
+    "baseStats": {
       "hp": 50,
       "attack": 105,
       "defense": 79,
-      "special-attack": 35,
-      "special-defense": 110,
+      "specialAttack": 35,
+      "specialDefense": 110,
       "speed": 76
     },
     "color": {
@@ -1680,14 +1680,14 @@
     }
   },
   {
-    "id": 108,
+    "pokemonId": 108,
     "name": "ベロリンガ",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 55,
       "defense": 75,
-      "special-attack": 60,
-      "special-defense": 75,
+      "specialAttack": 60,
+      "specialDefense": 75,
       "speed": 30
     },
     "color": {
@@ -1696,14 +1696,14 @@
     }
   },
   {
-    "id": 109,
+    "pokemonId": 109,
     "name": "ドガース",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 65,
       "defense": 95,
-      "special-attack": 60,
-      "special-defense": 45,
+      "specialAttack": 60,
+      "specialDefense": 45,
       "speed": 35
     },
     "color": {
@@ -1712,14 +1712,14 @@
     }
   },
   {
-    "id": 110,
+    "pokemonId": 110,
     "name": "マタドガス",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 90,
       "defense": 120,
-      "special-attack": 85,
-      "special-defense": 70,
+      "specialAttack": 85,
+      "specialDefense": 70,
       "speed": 60
     },
     "color": {
@@ -1728,14 +1728,14 @@
     }
   },
   {
-    "id": 111,
+    "pokemonId": 111,
     "name": "サイホーン",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 85,
       "defense": 95,
-      "special-attack": 30,
-      "special-defense": 30,
+      "specialAttack": 30,
+      "specialDefense": 30,
       "speed": 25
     },
     "color": {
@@ -1744,14 +1744,14 @@
     }
   },
   {
-    "id": 112,
+    "pokemonId": 112,
     "name": "サイドン",
-    "stats": {
+    "baseStats": {
       "hp": 105,
       "attack": 130,
       "defense": 120,
-      "special-attack": 45,
-      "special-defense": 45,
+      "specialAttack": 45,
+      "specialDefense": 45,
       "speed": 40
     },
     "color": {
@@ -1760,14 +1760,14 @@
     }
   },
   {
-    "id": 113,
+    "pokemonId": 113,
     "name": "ラッキー",
-    "stats": {
+    "baseStats": {
       "hp": 250,
       "attack": 5,
       "defense": 5,
-      "special-attack": 35,
-      "special-defense": 105,
+      "specialAttack": 35,
+      "specialDefense": 105,
       "speed": 50
     },
     "color": {
@@ -1776,14 +1776,14 @@
     }
   },
   {
-    "id": 114,
+    "pokemonId": 114,
     "name": "モンジャラ",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 55,
       "defense": 115,
-      "special-attack": 100,
-      "special-defense": 40,
+      "specialAttack": 100,
+      "specialDefense": 40,
       "speed": 60
     },
     "color": {
@@ -1792,14 +1792,14 @@
     }
   },
   {
-    "id": 115,
+    "pokemonId": 115,
     "name": "ガルーラ",
-    "stats": {
+    "baseStats": {
       "hp": 105,
       "attack": 95,
       "defense": 80,
-      "special-attack": 40,
-      "special-defense": 80,
+      "specialAttack": 40,
+      "specialDefense": 80,
       "speed": 90
     },
     "color": {
@@ -1808,14 +1808,14 @@
     }
   },
   {
-    "id": 116,
+    "pokemonId": 116,
     "name": "タッツー",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 40,
       "defense": 70,
-      "special-attack": 70,
-      "special-defense": 25,
+      "specialAttack": 70,
+      "specialDefense": 25,
       "speed": 60
     },
     "color": {
@@ -1824,14 +1824,14 @@
     }
   },
   {
-    "id": 117,
+    "pokemonId": 117,
     "name": "シードラ",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 65,
       "defense": 95,
-      "special-attack": 95,
-      "special-defense": 45,
+      "specialAttack": 95,
+      "specialDefense": 45,
       "speed": 85
     },
     "color": {
@@ -1840,14 +1840,14 @@
     }
   },
   {
-    "id": 118,
+    "pokemonId": 118,
     "name": "トサキント",
-    "stats": {
+    "baseStats": {
       "hp": 45,
       "attack": 67,
       "defense": 60,
-      "special-attack": 35,
-      "special-defense": 50,
+      "specialAttack": 35,
+      "specialDefense": 50,
       "speed": 63
     },
     "color": {
@@ -1856,14 +1856,14 @@
     }
   },
   {
-    "id": 119,
+    "pokemonId": 119,
     "name": "アズマオウ",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 92,
       "defense": 65,
-      "special-attack": 65,
-      "special-defense": 80,
+      "specialAttack": 65,
+      "specialDefense": 80,
       "speed": 68
     },
     "color": {
@@ -1872,14 +1872,14 @@
     }
   },
   {
-    "id": 120,
+    "pokemonId": 120,
     "name": "ヒトデマン",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 45,
       "defense": 55,
-      "special-attack": 70,
-      "special-defense": 55,
+      "specialAttack": 70,
+      "specialDefense": 55,
       "speed": 85
     },
     "color": {
@@ -1888,14 +1888,14 @@
     }
   },
   {
-    "id": 121,
+    "pokemonId": 121,
     "name": "スターミー",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 75,
       "defense": 85,
-      "special-attack": 100,
-      "special-defense": 85,
+      "specialAttack": 100,
+      "specialDefense": 85,
       "speed": 115
     },
     "color": {
@@ -1904,14 +1904,14 @@
     }
   },
   {
-    "id": 122,
+    "pokemonId": 122,
     "name": "バリヤード",
-    "stats": {
+    "baseStats": {
       "hp": 40,
       "attack": 45,
       "defense": 65,
-      "special-attack": 100,
-      "special-defense": 120,
+      "specialAttack": 100,
+      "specialDefense": 120,
       "speed": 90
     },
     "color": {
@@ -1920,14 +1920,14 @@
     }
   },
   {
-    "id": 123,
+    "pokemonId": 123,
     "name": "ストライク",
-    "stats": {
+    "baseStats": {
       "hp": 70,
       "attack": 110,
       "defense": 80,
-      "special-attack": 55,
-      "special-defense": 80,
+      "specialAttack": 55,
+      "specialDefense": 80,
       "speed": 105
     },
     "color": {
@@ -1936,14 +1936,14 @@
     }
   },
   {
-    "id": 124,
+    "pokemonId": 124,
     "name": "ルージュラ",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 50,
       "defense": 35,
-      "special-attack": 115,
-      "special-defense": 95,
+      "specialAttack": 115,
+      "specialDefense": 95,
       "speed": 95
     },
     "color": {
@@ -1952,14 +1952,14 @@
     }
   },
   {
-    "id": 125,
+    "pokemonId": 125,
     "name": "エレブー",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 83,
       "defense": 57,
-      "special-attack": 95,
-      "special-defense": 85,
+      "specialAttack": 95,
+      "specialDefense": 85,
       "speed": 105
     },
     "color": {
@@ -1968,14 +1968,14 @@
     }
   },
   {
-    "id": 126,
+    "pokemonId": 126,
     "name": "ブーバー",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 95,
       "defense": 57,
-      "special-attack": 100,
-      "special-defense": 85,
+      "specialAttack": 100,
+      "specialDefense": 85,
       "speed": 93
     },
     "color": {
@@ -1984,14 +1984,14 @@
     }
   },
   {
-    "id": 127,
+    "pokemonId": 127,
     "name": "カイロス",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 125,
       "defense": 100,
-      "special-attack": 55,
-      "special-defense": 70,
+      "specialAttack": 55,
+      "specialDefense": 70,
       "speed": 85
     },
     "color": {
@@ -2000,14 +2000,14 @@
     }
   },
   {
-    "id": 128,
+    "pokemonId": 128,
     "name": "ケンタロス",
-    "stats": {
+    "baseStats": {
       "hp": 75,
       "attack": 100,
       "defense": 95,
-      "special-attack": 40,
-      "special-defense": 70,
+      "specialAttack": 40,
+      "specialDefense": 70,
       "speed": 110
     },
     "color": {
@@ -2016,14 +2016,14 @@
     }
   },
   {
-    "id": 129,
+    "pokemonId": 129,
     "name": "コイキング",
-    "stats": {
+    "baseStats": {
       "hp": 20,
       "attack": 10,
       "defense": 55,
-      "special-attack": 15,
-      "special-defense": 20,
+      "specialAttack": 15,
+      "specialDefense": 20,
       "speed": 80
     },
     "color": {
@@ -2032,14 +2032,14 @@
     }
   },
   {
-    "id": 130,
+    "pokemonId": 130,
     "name": "ギャラドス",
-    "stats": {
+    "baseStats": {
       "hp": 95,
       "attack": 125,
       "defense": 79,
-      "special-attack": 60,
-      "special-defense": 100,
+      "specialAttack": 60,
+      "specialDefense": 100,
       "speed": 81
     },
     "color": {
@@ -2048,14 +2048,14 @@
     }
   },
   {
-    "id": 131,
+    "pokemonId": 131,
     "name": "ラプラス",
-    "stats": {
+    "baseStats": {
       "hp": 130,
       "attack": 85,
       "defense": 80,
-      "special-attack": 85,
-      "special-defense": 95,
+      "specialAttack": 85,
+      "specialDefense": 95,
       "speed": 60
     },
     "color": {
@@ -2064,14 +2064,14 @@
     }
   },
   {
-    "id": 132,
+    "pokemonId": 132,
     "name": "メタモン",
-    "stats": {
+    "baseStats": {
       "hp": 48,
       "attack": 48,
       "defense": 48,
-      "special-attack": 48,
-      "special-defense": 48,
+      "specialAttack": 48,
+      "specialDefense": 48,
       "speed": 48
     },
     "color": {
@@ -2080,14 +2080,14 @@
     }
   },
   {
-    "id": 133,
+    "pokemonId": 133,
     "name": "イーブイ",
-    "stats": {
+    "baseStats": {
       "hp": 55,
       "attack": 55,
       "defense": 50,
-      "special-attack": 45,
-      "special-defense": 65,
+      "specialAttack": 45,
+      "specialDefense": 65,
       "speed": 55
     },
     "color": {
@@ -2096,14 +2096,14 @@
     }
   },
   {
-    "id": 134,
+    "pokemonId": 134,
     "name": "シャワーズ",
-    "stats": {
+    "baseStats": {
       "hp": 130,
       "attack": 65,
       "defense": 60,
-      "special-attack": 110,
-      "special-defense": 95,
+      "specialAttack": 110,
+      "specialDefense": 95,
       "speed": 65
     },
     "color": {
@@ -2112,14 +2112,14 @@
     }
   },
   {
-    "id": 135,
+    "pokemonId": 135,
     "name": "サンダース",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 65,
       "defense": 60,
-      "special-attack": 110,
-      "special-defense": 95,
+      "specialAttack": 110,
+      "specialDefense": 95,
       "speed": 130
     },
     "color": {
@@ -2128,14 +2128,14 @@
     }
   },
   {
-    "id": 136,
+    "pokemonId": 136,
     "name": "ブースター",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 130,
       "defense": 60,
-      "special-attack": 95,
-      "special-defense": 110,
+      "specialAttack": 95,
+      "specialDefense": 110,
       "speed": 65
     },
     "color": {
@@ -2144,14 +2144,14 @@
     }
   },
   {
-    "id": 137,
+    "pokemonId": 137,
     "name": "ポリゴン",
-    "stats": {
+    "baseStats": {
       "hp": 65,
       "attack": 60,
       "defense": 70,
-      "special-attack": 85,
-      "special-defense": 75,
+      "specialAttack": 85,
+      "specialDefense": 75,
       "speed": 40
     },
     "color": {
@@ -2160,14 +2160,14 @@
     }
   },
   {
-    "id": 138,
+    "pokemonId": 138,
     "name": "オムナイト",
-    "stats": {
+    "baseStats": {
       "hp": 35,
       "attack": 40,
       "defense": 100,
-      "special-attack": 90,
-      "special-defense": 55,
+      "specialAttack": 90,
+      "specialDefense": 55,
       "speed": 35
     },
     "color": {
@@ -2176,14 +2176,14 @@
     }
   },
   {
-    "id": 139,
+    "pokemonId": 139,
     "name": "オムスター",
-    "stats": {
+    "baseStats": {
       "hp": 70,
       "attack": 60,
       "defense": 125,
-      "special-attack": 115,
-      "special-defense": 70,
+      "specialAttack": 115,
+      "specialDefense": 70,
       "speed": 55
     },
     "color": {
@@ -2192,14 +2192,14 @@
     }
   },
   {
-    "id": 140,
+    "pokemonId": 140,
     "name": "カブト",
-    "stats": {
+    "baseStats": {
       "hp": 30,
       "attack": 80,
       "defense": 90,
-      "special-attack": 55,
-      "special-defense": 45,
+      "specialAttack": 55,
+      "specialDefense": 45,
       "speed": 55
     },
     "color": {
@@ -2208,14 +2208,14 @@
     }
   },
   {
-    "id": 141,
+    "pokemonId": 141,
     "name": "カブトプス",
-    "stats": {
+    "baseStats": {
       "hp": 60,
       "attack": 115,
       "defense": 105,
-      "special-attack": 65,
-      "special-defense": 70,
+      "specialAttack": 65,
+      "specialDefense": 70,
       "speed": 80
     },
     "color": {
@@ -2224,14 +2224,14 @@
     }
   },
   {
-    "id": 142,
+    "pokemonId": 142,
     "name": "プテラ",
-    "stats": {
+    "baseStats": {
       "hp": 80,
       "attack": 105,
       "defense": 65,
-      "special-attack": 60,
-      "special-defense": 75,
+      "specialAttack": 60,
+      "specialDefense": 75,
       "speed": 130
     },
     "color": {
@@ -2240,14 +2240,14 @@
     }
   },
   {
-    "id": 143,
+    "pokemonId": 143,
     "name": "カビゴン",
-    "stats": {
+    "baseStats": {
       "hp": 160,
       "attack": 110,
       "defense": 65,
-      "special-attack": 65,
-      "special-defense": 110,
+      "specialAttack": 65,
+      "specialDefense": 110,
       "speed": 30
     },
     "color": {
@@ -2256,14 +2256,14 @@
     }
   },
   {
-    "id": 144,
+    "pokemonId": 144,
     "name": "フリーザー",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 85,
       "defense": 100,
-      "special-attack": 95,
-      "special-defense": 125,
+      "specialAttack": 95,
+      "specialDefense": 125,
       "speed": 85
     },
     "color": {
@@ -2272,14 +2272,14 @@
     }
   },
   {
-    "id": 145,
+    "pokemonId": 145,
     "name": "サンダー",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 90,
       "defense": 85,
-      "special-attack": 125,
-      "special-defense": 90,
+      "specialAttack": 125,
+      "specialDefense": 90,
       "speed": 100
     },
     "color": {
@@ -2288,14 +2288,14 @@
     }
   },
   {
-    "id": 146,
+    "pokemonId": 146,
     "name": "ファイヤー",
-    "stats": {
+    "baseStats": {
       "hp": 90,
       "attack": 100,
       "defense": 90,
-      "special-attack": 125,
-      "special-defense": 85,
+      "specialAttack": 125,
+      "specialDefense": 85,
       "speed": 90
     },
     "color": {
@@ -2304,14 +2304,14 @@
     }
   },
   {
-    "id": 147,
+    "pokemonId": 147,
     "name": "ミニリュウ",
-    "stats": {
+    "baseStats": {
       "hp": 41,
       "attack": 64,
       "defense": 45,
-      "special-attack": 50,
-      "special-defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
       "speed": 50
     },
     "color": {
@@ -2320,14 +2320,14 @@
     }
   },
   {
-    "id": 148,
+    "pokemonId": 148,
     "name": "ハクリュー",
-    "stats": {
+    "baseStats": {
       "hp": 61,
       "attack": 84,
       "defense": 65,
-      "special-attack": 70,
-      "special-defense": 70,
+      "specialAttack": 70,
+      "specialDefense": 70,
       "speed": 70
     },
     "color": {
@@ -2336,14 +2336,14 @@
     }
   },
   {
-    "id": 149,
+    "pokemonId": 149,
     "name": "カイリュー",
-    "stats": {
+    "baseStats": {
       "hp": 91,
       "attack": 134,
       "defense": 95,
-      "special-attack": 100,
-      "special-defense": 100,
+      "specialAttack": 100,
+      "specialDefense": 100,
       "speed": 80
     },
     "color": {
@@ -2352,14 +2352,14 @@
     }
   },
   {
-    "id": 150,
+    "pokemonId": 150,
     "name": "ミュウツー",
-    "stats": {
+    "baseStats": {
       "hp": 106,
       "attack": 110,
       "defense": 90,
-      "special-attack": 154,
-      "special-defense": 90,
+      "specialAttack": 154,
+      "specialDefense": 90,
       "speed": 130
     },
     "color": {
@@ -2368,14 +2368,14 @@
     }
   },
   {
-    "id": 151,
+    "pokemonId": 151,
     "name": "ミュウ",
-    "stats": {
+    "baseStats": {
       "hp": 100,
       "attack": 100,
       "defense": 100,
-      "special-attack": 100,
-      "special-defense": 100,
+      "specialAttack": 100,
+      "specialDefense": 100,
       "speed": 100
     },
     "color": {
