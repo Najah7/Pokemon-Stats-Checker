@@ -3,7 +3,8 @@ const axios = require('axios');
 const path = require('path');
 
 // HACK: @などでルートディレクトリを指定できるように
-import { Pokemon, Stats, StatName } from '../../types/pokemons';
+import { Pokemon } from '../../types/pokemon';
+import { BaseStats } from '../../types/stat';
 
 // HACK: スマートな方法があれば修正
 const PROJECT_ROOT = path.join(__dirname, '..', '..', '..'); // プロジェクトのルートディレクトリ
@@ -11,7 +12,7 @@ const PROJECT_ROOT = path.join(__dirname, '..', '..', '..'); // プロジェク�
 const MAX_POKEMON_ID = 151; // 第1世代のポケモンの数が151匹
 
 const fetchPokemons = async () => {
-    let pokemonList: Pokemon[] = [];
+    let pokemonList: TmpPokemon[] = [];
     console.log('ポケモンデータを取得中...');
     for (let i = 1; i <= MAX_POKEMON_ID; i++) {
         try {
@@ -20,10 +21,10 @@ const fetchPokemons = async () => {
             const id = pokemonData.id;
             const name = await toJapaneseWithAPICall(pokemonData.species.url);
             const stats = pokemonData.stats.reduce((acc: any, stat: any) => {
-                const statName = stat.stat.name as StatName;
+                const statName = stat.stat.name;
                 acc[statName] = stat.base_stat;
                 return acc;
-            }, {} as Stats);
+            }, {} as BaseStats);
             const pokemon = newPokemon(id, name, stats);
             pokemonList.push(pokemon);
         } catch (error: any) {
@@ -46,7 +47,13 @@ const toJapaneseWithAPICall = async (speciesUri: string) => {
     return jp_name;
 }
 
-const newPokemon = (id: number, name: string, stats: Stats): Pokemon => {
+type TmpPokemon = {
+    id: number,
+    name: string,
+    stats: BaseStats
+}
+
+const newPokemon = (id: number, name: string, stats: BaseStats): TmpPokemon => {
     const pokemon = {
         id: id,
         name: name,

@@ -4,12 +4,12 @@ import { Pokemon } from '../../../types/pokemon';
 import * as env from '../config';
 import { initDB } from '../common/init';
 
-const _pokemons = (db_path: string): Pokemon[] => {
+const pokemonsJson = (db_path: string): Pokemon[] => {
     const data = fs.readFileSync(db_path, 'utf8');
     return JSON.parse(data);
 }
 
 if (require.main === module) {
-    const pokemons = _pokemons(env.POKEMON_LOCAL_DB);
+    const pokemons = pokemonsJson(env.POKEMON_LOCAL_DB);
     initDB(env.POKEMON_COLLECTION, pokemons);
 }

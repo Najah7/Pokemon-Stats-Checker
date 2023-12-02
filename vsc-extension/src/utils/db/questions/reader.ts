@@ -3,33 +3,25 @@ import { readAllData, readDataById, readDataByName } from '../common/reader';
 
 import * as env from '../config';
 
-let cashedQuestions: Questions = new Map<number, Question>();
+let cashedQuestions: Questions = new Array<Question>();
 
 const activeQuestionsCache = async (): Promise<void> => {
     cashedQuestions = await readQuestions();
 }
 
 const readQuestions = async (): Promise<Questions> => {
-    const qs: Questions = await readAllData<Question>(
+    const data = await readAllData<Question>(
         env.QUESTION_COLLECTION,
-        ['id', 'question', 'answer'],
+        ['text', 'answer'],
         cashedQuestions
     );
-    return qs;
-}
-
-const readQuestionById = async (id: number): Promise<Question> => {
-    const q: Question = await readDataById<Question>(
-        env.QUESTION_COLLECTION,
-        id,
-        ['id', 'question', 'answer'],
-        cashedQuestions
-    );
-    return q;
+    if (data instanceof Array) {
+        return data;
+    }
+    return [];
 }
 
 export {
     activeQuestionsCache,
     readQuestions,
-    readQuestionById
 };

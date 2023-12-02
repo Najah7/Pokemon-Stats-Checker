@@ -8,9 +8,10 @@ const data = JSON.stringify({
   "database": env.DB,
   "dataSource": env.DATA_SOURCE,
   "projection": {
-    "id": env.INCLUDE,
+    "pokemonId": env.INCLUDE,
     "name": env.INCLUDE,
-    "stats": env.INCLUDE
+    "baseStats": env.INCLUDE,
+    "color": env.INCLUDE,
   },
 });
 

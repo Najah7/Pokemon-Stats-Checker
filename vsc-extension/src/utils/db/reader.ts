@@ -2,7 +2,7 @@ const fs = require('fs');
 const axios = require('axios');
 const path = require('path');
 
-import { Pokemon } from '../../types/pokemons';
+import { Pokemon } from '../../types/pokemon';
 
 // HACK: スマートな方法があれば修正
 const PROJECT_ROOT = path.join(__dirname, '..', '..', '..'); // プロジェクトのルートディレクトリ
@@ -25,14 +25,14 @@ const readPokemons = (): Pokemon[] => {
     return pokemonList;
 }
 
-const readPokemonById = (id: number): Pokemon => {
+const readPokemonById = (pokemonId: number): Pokemon => {
     if (pokemonList.length === 0) {
         readPokemonDataFromJson();
     }
-    const pokemon = pokemonList.find((pokemon: Pokemon) => pokemon.id === id);
+    const pokemon = pokemonList.find((pokemon: Pokemon) => pokemon.pokemonId === pokemonId);
     if (!pokemon) {
-        console.info(`[hint] We support only 1st generation pokemon between id 1 and ${MAX_POKEMON_ID}`);
-        throw new Error(`No pokemon found with id: ${id}`);
+        console.info(`[hint] We support only 1st generation pokemon between pokemonId 1 and ${MAX_POKEMON_ID}`);
+        throw new Error(`No pokemon found with pokemonId: ${pokemonId}`);
     }
     return pokemon;
 }

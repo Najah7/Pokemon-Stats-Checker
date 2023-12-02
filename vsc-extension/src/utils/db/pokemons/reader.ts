@@ -10,20 +10,30 @@ const activePokemonsCache = async (): Promise<void> => {
 }
 
 const readPokemons = async (): Promise<Pokemons> => {
-    const ps: Pokemons = await readAllData<Pokemon>(
+    const data = await readAllData<Pokemon>(
         env.POKEMON_COLLECTION,
-        ['id', 'name', 'stats'],
+        ['pokemonId', 'name', 'baseStats', 'color'],
         cashedPokemons
     );
+    // HACK: readAllData returns Map<number, T> | Array<T>, and I have no idea how to handle it
+    let ps: Pokemons;
+    if (data instanceof Map) {
+        ps = data;
+    } else {
+        ps = new Map<number, Pokemon>();
+        data.forEach((p: Pokemon) => {
+            ps.set(p.pokemonId, p);
+        });
+    }
     return ps;
 }
 
 // HACK: if it's possible, sum up readPokemonById and readPokemonByName
-const readPokemonById = async (id: number): Promise<Pokemon> => {
+const readPokemonById = async (pokemonId: number): Promise<Pokemon> => {
     const p: Pokemon = await readDataById<Pokemon>(
         env.POKEMON_COLLECTION,
-        id,
-        ['id', 'name', 'stats'],
+        pokemonId,
+        ['pokemonId', 'name', 'baseStats', 'color'],
         cashedPokemons
     );
     return p;
@@ -33,7 +43,7 @@ const readPokemonByName = async (name: string): Promise<Pokemon> => {
     const p: Pokemon = await readDataByName<Pokemon>(
         env.POKEMON_COLLECTION,
         name,
-        ['id', 'name', 'stats'],
+        ['pokemonId', 'name', 'baseStats', 'color'],
         cashedPokemons
     );
     return p;
