@@ -3,6 +3,24 @@ import { getNonce } from "./getNonce";
 import { start } from "./start";
 import { StatsType, calcStats } from "./calcStats";
 import { LANGUAGES, isLanguage, languageList } from "./openNote";
+import { PostType, postRequest } from "./apiRequests";
+
+const mock: PostType = {
+  baseStats: {
+    hp: 10,
+    attack: 10,
+    defense: 10,
+    specialAttack: 10,
+    specialDefense: 10,
+    speed: 10,
+  },
+  userName: "sugiyama",
+  pokemonId: 1,
+  color: {
+    fillColor: "#ff0000",
+    lineColor: "#000000",
+  },
+};
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -25,6 +43,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     webviewView.webview.postMessage({ type: "setup", value: languageList });
 
     let trueAnswer: string;
+    let imgUrl: string;
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
         case "start": {
@@ -55,17 +74,39 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               value: message,
             });
 
-            // // 種族値特徴の近いポケモンを探索
+            // 種族値特徴の近いポケモンを探索
             // getPokemon(h, a, b, c, d, s);
 
-            // // メトリクスをPOST
-            // post(h, a, b, c, d, s);
+            // メトリクスをPOST
+            const res = await postRequest(mock);
+            if (res) {
+              imgUrl = res?.data as string;
+              webviewView.webview.postMessage({
+                type: "fetchedImg",
+                value: imgUrl,
+              });
+              return;
+            } else {
+              vscode.window.showErrorMessage("種族値のPOSTに失敗しました");
+              return;
+            }
           } else {
             webviewView.webview.postMessage({
               type: "uncorrected",
               value: "答えが間違っています",
             });
           }
+          break;
+        }
+        case "copy": {
+          const code = '<img src="' + imgUrl + '" width="300px" />';
+          vscode.env.clipboard.writeText(code);
+          vscode.window.showInformationMessage(`コピーしました \n ${code}`);
+          break;
+        }
+        case "shareX": {
+          const url = `https://twitter.com/intent/tweet?text=あなたは「python界のガルーラ」です%0a%0a&url=https://github.com/najah7/pokemon-stats-checker&hashtags=エンジニア種族値チェッカー`;
+          vscode.env.openExternal(vscode.Uri.parse(url));
           break;
         }
         case "onInfo": {
@@ -138,7 +179,9 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         </div>
         <div style="display: none;" class="ui" id="fetchedImg">
           <h3>あなたの種族値</h3>
-          <img id="img"/>
+          <img id="img" />
+          <button id="copy">GitHubに貼る</button>
+          <button id="shareX">Xでシェアする</button>
         </div>
         
         <script>
@@ -148,6 +191,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           const startButton = document.getElementById("start");
           const submitButton = document.getElementById("submit");
           const answerInput = document.getElementById("answer");
+          const copyButton = document.getElementById("copy");
+          const shareXButton = document.getElementById("shareX");
 
           window.addEventListener("message", (event) => {
             const message = event.data;
@@ -179,6 +224,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
                 document.getElementById("error").innerText = message.value;
                 break;
               }
+              case "fetchedImg": {
+                document.getElementById("fetchedImg").style.display = "block";
+                document.getElementById("img").src = message.value;
+                document.getElementById("code").innerText = '<img src="' + message.value + '" width="300px" />';
+                break;
+              }
             }
           });
 
@@ -196,6 +247,18 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               value: answer,
             });
           });    
+          
+          copyButton.addEventListener("click", () => {
+            vscode.postMessage({
+              type: "copy",
+            });
+          });
+
+          shareXButton.addEventListener("click", () => {
+            vscode.postMessage({
+              type: "shareX",
+            });
+          });
         </script>
 			</body>
 			<script src="${scriptUri}">

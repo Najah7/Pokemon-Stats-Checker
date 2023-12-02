@@ -3,7 +3,8 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 
 dotenv.config({ path: path.join(__dirname, ".env") });
-const apiKey = process.env.API_KEY; // ここにAPIキーを設定
+
+const apiKey = process.env.API_KEY;
 
 export async function getRequest<T>(
   userName: string
@@ -26,17 +27,51 @@ export async function getRequest<T>(
   }
 }
 
+export type PostType = {
+  userName: string;
+  pokemonId: number;
+  baseStats: {
+    hp: number;
+    attack: number;
+    defense: number;
+    specialAttack: number;
+    specialDefense: number;
+    speed: number;
+  };
+  color: {
+    fillColor: string;
+    lineColor: string;
+  };
+};
+
 export async function postRequest<T>(
-  data?: Record<string, any>
+  data: PostType
 ): Promise<AxiosResponse<T> | null> {
   const url =
     "https://01q8r9zev4.execute-api.ap-northeast-1.amazonaws.com/prd/graph/mygraph";
-  const apiKey = "API_KEY"; // ここにAPIキーを設定
   const headers = {
     "x-api-key": apiKey,
   };
+  const body = `
+    {
+      "userName": "${data.userName}",
+      "pokemonID": ${data.pokemonId},
+      "baseStats": {
+        "hp": ${data.baseStats.hp},
+        "attack": ${data.baseStats.attack},
+        "defense": ${data.baseStats.defense},
+        "specialAttack": ${data.baseStats.specialAttack},
+        "specialDefense": ${data.baseStats.specialDefense},
+        "speed": ${data.baseStats.speed}
+      },
+      "color": {
+        "fillColor": "${data.color.fillColor}",
+        "lineColor": "${data.color.lineColor}"
+      }
+    }
+  `;
   try {
-    const response = await axios.post<T>(url, data, {
+    const response = await axios.post<T>(url, body, {
       headers,
       timeout: 20000,
     });
