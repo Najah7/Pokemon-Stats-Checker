@@ -1,7 +1,7 @@
 [
     {
         "name": "Bulbasaur",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -11,7 +11,7 @@
     },
     {
         "name": "Ivysaur",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -21,7 +21,7 @@
     },
     {
         "name": "Venusaur",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -31,7 +31,7 @@
     },
     {
         "name": "Charmander",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -41,7 +41,7 @@
     },
     {
         "name": "Charmeleon",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -51,7 +51,7 @@
     },
     {
         "name": "Charizard",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -61,7 +61,7 @@
     },
     {
         "name": "Squirtle",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -71,7 +71,7 @@
     },
     {
         "name": "Wartortle",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
@@ -81,7 +81,7 @@
     },
     {
         "name": "Blastoise",
-        "stats": {
+        "baseStats": {
             "hp": 100,
             "attack": 10,
             "defense": 10,
