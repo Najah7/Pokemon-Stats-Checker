@@ -1,10 +1,7 @@
 import * as vscode from "vscode";
 import * as diff from "diff";
 import { button } from "./button";
-import { f } from "./function";
-import { start, startTime } from "./start";
-import { post } from "./post";
-import { getUrl, getPokemon } from "./get";
+import { startTime } from "./start";
 import { auth } from "./auth";
 import { SidebarProvider } from "./SidebarProvider";
 
