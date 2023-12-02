@@ -17,7 +17,9 @@ It has a lot of features.
 We are writing about this soon.
 
 ## How to use
-![demo movie](https://github.com/Najah7/Pokemon-Stats-Checker/assets/79052634/5fd57658-6de3-483d-94ca-794f03e53d8f)
+![demo](https://github.com/Najah7/Pokemon-Stats-Checker/assets/79052634/aea6b269-2385-4fb4-a002-acefdc0db0cf)
+
+
 
 
 
