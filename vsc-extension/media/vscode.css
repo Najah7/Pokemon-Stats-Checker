@@ -89,3 +89,35 @@ input::placeholder,
 textarea::placeholder {
   color: var(--vscode-input-placeholderForeground);
 }
+
+/* custom */
+p,
+input,
+button {
+  margin: 4px 0;
+}
+
+select {
+  display: block;
+  width: 100%;
+  border: none;
+  font-family: var(--vscode-font-family);
+  padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  color: var(--vscode-input-foreground);
+  outline-color: var(--vscode-input-border);
+  background-color: var(--vscode-input-background);
+}
+
+.desc {
+  font-size: 0.8em;
+  color: var(--vscode-descriptionForeground);
+}
+
+#error {
+  font-size: 0.8em;
+  color: var(--vscode-errorForeground);
+}
+
+#stats {
+  font-size: 1.2em;
+}
