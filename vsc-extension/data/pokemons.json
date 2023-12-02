@@ -448,6 +448,22 @@
     }
   },
   {
+    "pokemonId": 29,
+    "name": "ニドラン♀",
+    "baseStats": {
+      "hp": 55,
+      "attack": 47,
+      "defense": 52,
+      "specialAttack": 40,
+      "specialDefense": 40,
+      "speed": 41
+    },
+    "color": {
+      "fillColor": "#A040A0",
+      "lineColor": "#A890F0"
+    }
+  },
+  {
     "pokemonId": 30,
     "name": "ニドリーナ",
     "baseStats": {
@@ -477,6 +493,22 @@
     "color": {
       "fillColor": "#A040A0",
       "lineColor": "#A890F0"
+    }
+  },
+  {
+    "pokemonId": 32,
+    "name": "ニドラン♂",
+    "baseStats": {
+      "hp": 46,
+      "attack": 57,
+      "defense": 40,
+      "specialAttack": 40,
+      "specialDefense": 40,
+      "speed": 50
+    },
+    "color": {
+      "fillColor": "#d5ddf0",
+      "lineColor": "#68bcef"
     }
   },
   {
