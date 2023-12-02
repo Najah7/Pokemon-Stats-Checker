@@ -40,6 +40,10 @@ def run(csv_file, json_file):
     write_json(json_data, 'pokemon_with_color.json')
 
 if __name__ == '__main__':
-    csv_file = sys.argv[1]
-    json_file = sys.argv[2]
+    try:
+        csv_file = sys.argv[1]
+        json_file = sys.argv[2]
+    except IndexError:
+        print('Usage: python add_color.py <csv_file> <json_file>')
+        sys.exit(1)
     run(csv_file, json_file)

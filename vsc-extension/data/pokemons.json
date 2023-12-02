@@ -683,8 +683,8 @@
       "speed": 30
     },
     "color": {
-      "fillColor": "#74CB48",
-      "lineColor": "#C0F860"
+      "fillColor": "#54809d",
+      "lineColor": "#449f36"
     }
   },
   {
@@ -699,8 +699,8 @@
       "speed": 40
     },
     "color": {
-      "fillColor": "#74CB48",
-      "lineColor": "#C0F860"
+      "fillColor": "#54809d",
+      "lineColor": "#6e3e40"
     }
   },
   {
@@ -715,8 +715,8 @@
       "speed": 50
     },
     "color": {
-      "fillColor": "#74CB48",
-      "lineColor": "#C0F860"
+      "fillColor": "#54809d",
+      "lineColor": "#c83b5c"
     }
   },
   {
@@ -731,8 +731,8 @@
       "speed": 25
     },
     "color": {
-      "fillColor": "#AD5C42",
-      "lineColor": "#A040A0"
+      "fillColor": "#e27a5c",
+      "lineColor": "#be3c50"
     }
   },
   {
@@ -747,8 +747,8 @@
       "speed": 30
     },
     "color": {
-      "fillColor": "#AD5C42",
-      "lineColor": "#A040A0"
+      "fillColor": "#e27a5c",
+      "lineColor": "#be3c50"
     }
   },
   {
@@ -763,8 +763,8 @@
       "speed": 45
     },
     "color": {
-      "fillColor": "#A040A0",
-      "lineColor": "#D03058"
+      "fillColor": "#672f8c",
+      "lineColor": "#e798bc"
     }
   },
   {
@@ -779,8 +779,8 @@
       "speed": 90
     },
     "color": {
-      "fillColor": "#A040A0",
-      "lineColor": "#D03058"
+      "fillColor": "#e1bbd6",
+      "lineColor": "#e6e0de"
     }
   },
   {
@@ -859,8 +859,8 @@
       "speed": 55
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#F8D030"
+      "fillColor": "#edb436",
+      "lineColor": "#f0deb8"
     }
   },
   {
@@ -875,7 +875,7 @@
       "speed": 85
     },
     "color": {
-      "fillColor": "#F08030",
+      "fillColor": "#88acd2",
       "lineColor": "#F8D030"
     }
   },
@@ -1003,8 +1003,8 @@
       "speed": 90
     },
     "color": {
-      "fillColor": "#F85888",
-      "lineColor": "#E0C068"
+      "fillColor": "#f5ea97",
+      "lineColor": "#b7b09e"
     }
   },
   {
@@ -1019,8 +1019,8 @@
       "speed": 105
     },
     "color": {
-      "fillColor": "#F85888",
-      "lineColor": "#E0C068"
+      "fillColor": "#f5ea97",
+      "lineColor": "#b7b09e"
     }
   },
   {
@@ -1035,8 +1035,8 @@
       "speed": 120
     },
     "color": {
-      "fillColor": "#F85888",
-      "lineColor": "#E0C068"
+      "fillColor": "#f5ea97",
+      "lineColor": "#b7b09e"
     }
   },
   {
@@ -1259,8 +1259,8 @@
       "speed": 15
     },
     "color": {
-      "fillColor": "#559EDF",
-      "lineColor": "#78C850"
+      "fillColor": "#ea8a89",
+      "lineColor": "#fff1aa"
     }
   },
   {
@@ -1275,8 +1275,8 @@
       "speed": 30
     },
     "color": {
-      "fillColor": "#559EDF",
-      "lineColor": "#78C850"
+      "fillColor": "#ea8a89",
+      "lineColor": "#c7d5da"
     }
   },
   {
@@ -1323,8 +1323,8 @@
       "speed": 60
     },
     "color": {
-      "fillColor": "#78C850",
-      "lineColor": "#F8D030"
+      "fillColor": "#5f9f1c",
+      "lineColor": "#c48e46"
     }
   },
   {
@@ -1339,8 +1339,8 @@
       "speed": 75
     },
     "color": {
-      "fillColor": "#A8A878",
-      "lineColor": "#C03028"
+      "fillColor": "#ad6741",
+      "lineColor": "#474547"
     }
   },
   {
@@ -1355,8 +1355,8 @@
       "speed": 110
     },
     "color": {
-      "fillColor": "#A8A878",
-      "lineColor": "#C03028"
+      "fillColor": "#ad6741",
+      "lineColor": "#474547"
     }
   },
   {
@@ -1403,8 +1403,8 @@
       "speed": 25
     },
     "color": {
-      "fillColor": "#8B8880",
-      "lineColor": "#705848"
+      "fillColor": "#927997",
+      "lineColor": "#674e75"
     }
   },
   {
@@ -1419,8 +1419,8 @@
       "speed": 50
     },
     "color": {
-      "fillColor": "#8B8880",
-      "lineColor": "#705848"
+      "fillColor": "#927997",
+      "lineColor": "#674e75"
     }
   },
   {
@@ -1435,8 +1435,8 @@
       "speed": 40
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#78C850"
+      "fillColor": "#917cb7",
+      "lineColor": "#3a3635"
     }
   },
   {
@@ -1451,8 +1451,8 @@
       "speed": 70
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#78C850"
+      "fillColor": "#917cb7",
+      "lineColor": "#3a3635"
     }
   },
   {
@@ -1467,8 +1467,8 @@
       "speed": 80
     },
     "color": {
-      "fillColor": "#705898",
-      "lineColor": "#F8D030"
+      "fillColor": "#8078a1",
+      "lineColor": "#3a3635"
     }
   },
   {
@@ -1483,8 +1483,8 @@
       "speed": 95
     },
     "color": {
-      "fillColor": "#705898",
-      "lineColor": "#F8D030"
+      "fillColor": "#8078a1",
+      "lineColor": "#3a3635"
     }
   },
   {
@@ -1499,8 +1499,8 @@
       "speed": 110
     },
     "color": {
-      "fillColor": "#705898",
-      "lineColor": "#F8D030"
+      "fillColor": "#8078a1",
+      "lineColor": "#3a3635"
     }
   },
   {
@@ -1531,8 +1531,8 @@
       "speed": 42
     },
     "color": {
-      "fillColor": "#F85888",
-      "lineColor": "#F08030"
+      "fillColor": "#ebc933",
+      "lineColor": "#5c554d"
     }
   },
   {
@@ -1547,8 +1547,8 @@
       "speed": 67
     },
     "color": {
-      "fillColor": "#F85888",
-      "lineColor": "#F08030"
+      "fillColor": "#ebc933",
+      "lineColor": "#e2e1df"
     }
   },
   {
@@ -1563,8 +1563,8 @@
       "speed": 50
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#F85888"
+      "fillColor": "#ec9957",
+      "lineColor": "#d4b096"
     }
   },
   {
@@ -1579,8 +1579,8 @@
       "speed": 75
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#F85888"
+      "fillColor": "#ec9957",
+      "lineColor": "#d4b096"
     }
   },
   {
@@ -1595,8 +1595,8 @@
       "speed": 100
     },
     "color": {
-      "fillColor": "#F8D030",
-      "lineColor": "#6890F0"
+      "fillColor": "#d94a60",
+      "lineColor": "#f3f5f8"
     }
   },
   {
@@ -1611,8 +1611,8 @@
       "speed": 150
     },
     "color": {
-      "fillColor": "#F8D030",
-      "lineColor": "#6890F0"
+      "fillColor": "#f3f5f8",
+      "lineColor": "#d94a60"
     }
   },
   {
@@ -1627,8 +1627,8 @@
       "speed": 40
     },
     "color": {
-      "fillColor": "#8CD750",
-      "lineColor": "#C6B7F5"
+      "fillColor": "#fbebea",
+      "lineColor": "#faef94"
     }
   },
   {
@@ -1659,8 +1659,8 @@
       "speed": 35
     },
     "color": {
-      "fillColor": "#E0C068",
-      "lineColor": "#A890F0"
+      "fillColor": "#fbf3ee",
+      "lineColor": "#cb904b"
     }
   },
   {
@@ -1675,8 +1675,8 @@
       "speed": 45
     },
     "color": {
-      "fillColor": "#E0C068",
-      "lineColor": "#A890F0"
+      "fillColor": "#fbf3ee",
+      "lineColor": "#cb904b"
     }
   },
   {
@@ -1691,8 +1691,8 @@
       "speed": 87
     },
     "color": {
-      "fillColor": "#C03028",
-      "lineColor": "#6890F0"
+      "fillColor": "#ac8a7e",
+      "lineColor": "#e2d7af"
     }
   },
   {
@@ -1707,8 +1707,8 @@
       "speed": 76
     },
     "color": {
-      "fillColor": "#C03028",
-      "lineColor": "#6890F0"
+      "fillColor": "#ac8a7e",
+      "lineColor": "#9590a4"
     }
   },
   {
@@ -1723,8 +1723,8 @@
       "speed": 30
     },
     "color": {
-      "fillColor": "#F0D8A0",
-      "lineColor": "#A040A0"
+      "fillColor": "#e794a6",
+      "lineColor": "#f8f1cb"
     }
   },
   {
@@ -1771,8 +1771,8 @@
       "speed": 25
     },
     "color": {
-      "fillColor": "#E0C068",
-      "lineColor": "#A040A0"
+      "fillColor": "#9ea6ad",
+      "lineColor": "#3a3635"
     }
   },
   {
@@ -1787,8 +1787,8 @@
       "speed": 40
     },
     "color": {
-      "fillColor": "#E0C068",
-      "lineColor": "#A040A0"
+      "fillColor": "#9ea6ad",
+      "lineColor": "#e8d8c3"
     }
   },
   {
@@ -1883,8 +1883,8 @@
       "speed": 63
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#E0C068"
+      "fillColor": "#e07067",
+      "lineColor": "#e0f0e0"
     }
   },
   {
@@ -1899,8 +1899,8 @@
       "speed": 68
     },
     "color": {
-      "fillColor": "#F08030",
-      "lineColor": "#E0C068"
+      "fillColor": "#e07067",
+      "lineColor": "#081d21"
     }
   },
   {
@@ -1963,8 +1963,8 @@
       "speed": 105
     },
     "color": {
-      "fillColor": "#C03028",
-      "lineColor": "#F8D030"
+      "fillColor": "#b0e178",
+      "lineColor": "#f1ecd6"
     }
   },
   {
@@ -1979,8 +1979,8 @@
       "speed": 95
     },
     "color": {
-      "fillColor": "#F0D8A0",
-      "lineColor": "#F85888"
+      "fillColor": "#724e84",
+      "lineColor": "#cd463c"
     }
   },
   {
@@ -2187,8 +2187,8 @@
       "speed": 40
     },
     "color": {
-      "fillColor": "#A040A0",
-      "lineColor": "#F85888"
+      "fillColor": "#e4798b",
+      "lineColor": "#90c9ed"
     }
   },
   {
@@ -2203,8 +2203,8 @@
       "speed": 35
     },
     "color": {
-      "fillColor": "#C0A880",
-      "lineColor": "#F85888"
+      "fillColor": "#7cbcd6",
+      "lineColor": "#e5e1bc"
     }
   },
   {
@@ -2219,8 +2219,8 @@
       "speed": 55
     },
     "color": {
-      "fillColor": "#C0A880",
-      "lineColor": "#F85888"
+      "fillColor": "#7cbcd6",
+      "lineColor": "#e5e1bc"
     }
   },
   {
@@ -2235,8 +2235,8 @@
       "speed": 55
     },
     "color": {
-      "fillColor": "#A040A0",
-      "lineColor": "#F08030"
+      "fillColor": "#b9812d",
+      "lineColor": "#242321"
     }
   },
   {
@@ -2251,8 +2251,8 @@
       "speed": 80
     },
     "color": {
-      "fillColor": "#A040A0",
-      "lineColor": "#F08030"
+      "fillColor": "#b9812d",
+      "lineColor": "#e1ded9"
     }
   },
   {
@@ -2267,8 +2267,8 @@
       "speed": 130
     },
     "color": {
-      "fillColor": "#A8A878",
-      "lineColor": "#F08030"
+      "fillColor": "#a79cac",
+      "lineColor": "#a062ae"
     }
   },
   {
@@ -2347,8 +2347,8 @@
       "speed": 50
     },
     "color": {
-      "fillColor": "#C6B7F5",
-      "lineColor": "#F8D030"
+      "fillColor": "#389dc8",
+      "lineColor": "#e1f0df"
     }
   },
   {
@@ -2363,8 +2363,8 @@
       "speed": 70
     },
     "color": {
-      "fillColor": "#C6B7F5",
-      "lineColor": "#F8D030"
+      "fillColor": "#389dc8",
+      "lineColor": "#e1f0df"
     }
   },
   {
@@ -2395,8 +2395,8 @@
       "speed": 130
     },
     "color": {
-      "fillColor": "#785CE8",
-      "lineColor": "#F8D030"
+      "fillColor": "#bc96c9",
+      "lineColor": "#e7e5f2"
     }
   },
   {
