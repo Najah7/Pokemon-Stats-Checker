@@ -1,7 +1,8 @@
 import * as vscode from "vscode";
 import { getNonce } from "./getNonce";
-import { QuestionType, start } from "./start";
+import { start } from "./start";
 import { StatsType, calcStats } from "./calcStats";
+import { LANGUAGES, isLanguage, languageList } from "./openNote";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   _view?: vscode.WebviewView;
@@ -21,13 +22,18 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.html = this._getHtmlForWebview(webviewView.webview);
 
-    webviewView.webview.postMessage({ type: "setup" });
+    webviewView.webview.postMessage({ type: "setup", value: languageList });
 
     let trueAnswer: string;
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
         case "start": {
-          const { question } = start();
+          const language = languageList.find((l) => l === data.value);
+          if (!language || !isLanguage(language)) {
+            vscode.window.showErrorMessage("言語が選択されていません");
+            return;
+          }
+          const { question } = start(LANGUAGES[language]);
           trueAnswer = question.trueAnswer;
           webviewView.webview.postMessage({
             type: "start",
@@ -112,11 +118,13 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 			</head>
       <body>
         <h1>Base-stats-checker</h1>
-        <divx class="ui" id="ready">
+        <div class="ui" id="ready">
           <p>あなたのエンジニア種族値を測ります</p>
           <p>準備ができたらstartを押してください</p>
+          <select id="language">
+          </select>
           <button id="start">start</button>
-        </divx>
+        </div>
         <div style="display: none;" class="ui" id="started">
           <p id="script"></p>
           <input type="text" id="answer" />
@@ -135,9 +143,23 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         <script>
           const vscode = acquireVsCodeApi();
           
+          const languageSelect = document.getElementById("language");
+          const startButton = document.getElementById("start");
+          const submitButton = document.getElementById("submit");
+          const answerInput = document.getElementById("answer");
+
           window.addEventListener("message", (event) => {
             const message = event.data;
             switch (message.type) {
+              case "setup": {
+                message.value.forEach((language) => {
+                  const option = document.createElement("option");
+                  option.text = language;
+                  option.value = language;
+                  languageSelect.appendChild(option);
+                });
+                break;
+              }
               case "start": {
                 const script = document.getElementById("script");
                 script.innerText = "Q:" + message.value;
@@ -159,15 +181,13 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
             }
           });
 
-          const startButton = document.getElementById("start");
           startButton.addEventListener("click", () => {
             vscode.postMessage({
               type: "start",
+              value: languageSelect.value,
             });
           });
 
-          const submitButton = document.getElementById("submit");
-          const answerInput = document.getElementById("answer");
           submitButton.addEventListener("click", () => {
             const answer = answerInput.value;
             vscode.postMessage({
