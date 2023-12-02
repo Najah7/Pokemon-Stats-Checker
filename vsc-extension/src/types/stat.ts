@@ -1,9 +1,3 @@
-interface Pokemon {
-    id: number;
-    name: string;
-    stats: Stats;
-}
-
 type StatName = 'hp' | 'attack' | 'defense' | 'special-attack' | 'special-defense' | 'speed';
 
 interface BaseStats {
@@ -18,4 +12,4 @@ interface BaseStats {
 // NOTE: Pick is just for flexibility. never mind.
 type Stats = Pick<BaseStats, StatName>;
 
-export { Pokemon, StatName, Stats };
+export { StatName, Stats };
