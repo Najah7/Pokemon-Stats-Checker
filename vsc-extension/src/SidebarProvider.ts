@@ -230,6 +230,18 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               value: answer,
             });
           });    
+          
+          copyButton.addEventListener("click", () => {
+            vscode.postMessage({
+              type: "copy",
+            });
+          });
+
+          shareXButton.addEventListener("click", () => {
+            vscode.postMessage({
+              type: "shareX",
+            });
+          });
         </script>
 			</body>
 			<script src="${scriptUri}">
