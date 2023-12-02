@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Bulbasaur",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Ivysaur",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Venusaur",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Charmander",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Charmeleon",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Charizard",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Squirtle",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Wartortle",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    },
+    {
+        "name": "Blastoise",
+        "stats": {
+            "hp": 100,
+            "attack": 10,
+            "defense": 10,
+            "speed": 10,
+            "special": 10
+        }
+    }
+]

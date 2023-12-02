@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "text": "What is the capital of India?",
+        "answer": "New Delhi"
+    },
+    {
+        "id": 2,
+        "text": "What is the capital of USA?",
+        "answer": "Washington DC"
+    },
+    {
+        "id": 3,
+        "text": "What is the capital of UK?",
+        "answer": "London"
+    },
+    {
+        "id": 4,
+        "text": "What is the capital of Australia?",
+        "answer": "Canberra"
+    },
+    {
+        "id": 5,
+        "text": "What is the capital of Canada?",
+        "answer": "Ottawa"
+    },
+    {
+        "id": 6,
+        "text": "What is the capital of China?",
+        "answer": "Beijing"
+    }
+]
