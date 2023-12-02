@@ -44,6 +44,7 @@ def get_pokemon_data(pokemon_id):
         # ステータス情報を取得
         stats = pokemon_data.get('stats', [])
         data_pokemon = [stat['base_stat'] for stat in stats]
+        data_pokemon += data_pokemon[:1]
 
         # 画像URLを取得
         front_default_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{pokemon_id}.png"
@@ -56,18 +57,21 @@ def get_pokemon_data(pokemon_id):
 
     return None, None
 
-def generate_radar_chart(data_pokemon, img_pokemon, data_user, labels):
+def generate_radar_chart(data_pokemon, img_pokemon, data_user, labels, color):
     """
     レーダーチャートを生成する関数
     """
     transparency = 0.3
     size = 0.8
+    fill_color = color.get('fillColor', 'gold')
+    line_color = color.get('lineColor', 'yellow')
 
     angles = np.linspace(0, 2 * np.pi, len(labels), endpoint=False).tolist()
+    angles += angles[:1]  # 最初と最後に同じ角度を追加して閉じる
 
     fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
-    ax.fill(angles, data_pokemon, color='gold', alpha=transparency)
-    ax.plot(angles, data_pokemon, color='yellow', linewidth=2)
+    ax.fill(angles, data_pokemon, color=fill_color, alpha=transparency)
+    ax.plot(angles, data_pokemon, color=line_color, linewidth=2)
     ax.fill(angles, data_user, alpha=transparency)
     ax.plot(angles, data_user, linewidth=2)
 
@@ -77,7 +81,7 @@ def generate_radar_chart(data_pokemon, img_pokemon, data_user, labels):
         ax.add_artist(ab)
 
     ax.set_yticklabels([])
-    ax.set_xticks(angles)
+    ax.set_xticks(angles[:-1])  # Remove the last element to match the number of labels
     ax.set_xticklabels(labels)
 
     # メモリ上で画像を保持
@@ -131,6 +135,7 @@ def lambda_handler(event, context):
             base_stats = request_body.get('baseStats', {})
             user_name = request_body.get('userName', '')
             pokemon_id = request_body.get('pokemonID', 0)
+            color = request_body.get('color', 0)
 
             img_pokemon, data_pokemon = get_pokemon_data(pokemon_id)
 
@@ -138,11 +143,12 @@ def lambda_handler(event, context):
             data_user = [
                 base_stats.get('hp', 0),
                 base_stats.get('attack', 0),
-                base_stats.get('deffence', 0),
+                base_stats.get('defense', 0),
                 base_stats.get('specialAttack', 0),
-                base_stats.get('specialDeffence', 0),
+                base_stats.get('specialDefense', 0),
                 base_stats.get('speed', 0)
             ]
+            data_user += data_user[:1]
             labels = [
                 'HP',
                 'Attack',
@@ -155,7 +161,7 @@ def lambda_handler(event, context):
             # レーダーチャートを生成し、S3にアップロード
             s3_bucket = 'graph-bucket-sugiyama'
             s3_key = f'sugiyama/graph.png'
-            image_data = generate_radar_chart(data_pokemon, img_pokemon, data_user, labels)
+            image_data = generate_radar_chart(data_pokemon, img_pokemon, data_user, labels, color)
 
             if upload_to_s3(s3_bucket, s3_key, image_data):
                 object_url = get_object_url(user_name)
