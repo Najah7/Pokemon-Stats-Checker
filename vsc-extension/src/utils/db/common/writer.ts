@@ -1,8 +1,10 @@
 import { newConfig, newDeleteParams, newInsertParams, newUpdateParams } from "./request";;
 import { pushData } from "./push";
-import { HasIdOrName } from "../../../types/utils";
+import { HasUserName, HasPokemonId } from "../../../types/utils/db/ids";
 
-const insertData = async <T extends HasIdOrName>(
+type HasPokemonIdOrUserName =  HasPokemonId | HasUserName;
+
+const insertData = async <T extends HasPokemonIdOrUserName>(
     collection: string,
     insertedData: T,
 ): Promise<void> => {
@@ -11,7 +13,7 @@ const insertData = async <T extends HasIdOrName>(
     await pushData(config)
 }
 
-const updateData = async <T extends HasIdOrName>(
+const updateData = async <T extends HasPokemonIdOrUserName>(
     collection: string,
     updateData: T,
 ): Promise<void> => {

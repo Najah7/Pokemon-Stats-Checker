@@ -1,31 +1,61 @@
-import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse, AxiosError, Axios } from 'axios';
 
-import { HasIdOrName } from '../../../types/utils';
+import { HasPokemonId, HasUserName } from '../../../types/utils/db/ids';
+import { config } from 'yargs';
 
-const fetchData = async <T extends HasIdOrName>(
+const updateCache = <T extends FetchTypes>(
+    dataList: T[],
+    cache: Map<number, T> | T[]
+): void => {
+    // initialize cache
+    Array.isArray(cache) ? cache.length = 0 : cache.clear();
+    dataList.forEach((data: T, index: number) => {
+        if (('pokemonId' in data && data.pokemonId !== undefined)) {
+            if (Array.isArray(cache)) cache[data.pokemonId] = data;
+            else cache.set(data.pokemonId, data);
+        } else {
+            console.log(dataList)
+            console.log(config)
+            if (Array.isArray(cache)) cache[index] = data;
+            else throw new Error('Invalid cache type');
+        }
+    });
+};
+
+type NoIdentifier = {};
+
+type FetchTypes = HasPokemonId | HasUserName | NoIdentifier;
+
+const fetchAllData = async <T extends FetchTypes>(
     config: AxiosRequestConfig,
-    dataMap: Map<number, T>,
+    cache: Map<number, T> | Array<T>,
     successMessage: string,
     errorMessage: string
 ): Promise<void> => {
-    await axios(config)
-        .then(function (response: AxiosResponse) {
-            const dataList = response.data.documents;
-            dataMap.clear();
-            dataList.forEach((data: T, index: number) => {
-                if ('id' in data && data.id !== undefined) {
-                    dataMap.set(data.id, data);
-                } else if ('name' in data) {
-                    // Assume name is unique and use a unique index if required
-                    dataMap.set(index, data);
-                }
-            });
-            console.log(successMessage);
-        })
-        .catch(function (error: AxiosError) {
-            console.log(error);
-            throw new Error(errorMessage);
-        });
+    try {
+        const response: AxiosResponse = await axios(config);
+        const dataList: T[] = response.data.documents;
+        updateCache(dataList, cache);
+        console.log(successMessage);
+    } catch (error) {
+        console.log(config);
+        console.log(error);
+        throw new Error(errorMessage);
+    }
 };
 
-export { fetchData };
+const fetchData = async <T>(
+    config: AxiosRequestConfig
+): Promise<T> => {
+    try {
+        const response: AxiosResponse = await axios(config);
+        const data: T = response.data;
+        return data;
+    } catch (error) {
+        console.log(error);
+        throw new Error("Failed to fetch data from DB!");
+    }
+};
+
+
+export { fetchAllData, FetchTypes };

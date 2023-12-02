@@ -1,15 +1,27 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 
+import {
+    Projection,
+    FindParams,
+    InsertParams,
+    UpdateParams,
+    DeleteParams
+} from './params';
 import * as env from '../config';
 
-const newProjection = (...args: string[]): {[key: string]: number} => {
-    return args.reduce((projection: {[key: string]: number}, key: string) => {
-        projection[key] = env.INCLUDE;
-        return projection;
+const newProjection = (...args: string[]): Projection => {
+    const p: Projection = args.reduce((p: Projection, key: string) => {
+        p[key] = env.INCLUDE;
+        return p;
     }, {});
+    return p;
 }
 
-const newFindParams = (collection: string, filter: object,...projections_keys: string[]): {[key: string]: any} => {
+const newFindParams = (
+    collection: string,
+    filter: object,
+    ...projections_keys: string[]
+    ): FindParams => {
     const projection = newProjection(...projections_keys);
     return {
         "collection": collection,
@@ -23,7 +35,7 @@ const newFindParams = (collection: string, filter: object,...projections_keys: s
 const newInsertParams = (
     collection: string,
     document: object
-    ): {[key: string]: any} => {
+    ): InsertParams => {
         return {
             "collection": collection,
             "database": env.DB,
@@ -36,7 +48,7 @@ const newUpdateParams = (
     collection: string,
     filter: object,
     update: object
-    ): {[key: string]: any} => {
+    ): UpdateParams => {
         return {
             "collection": collection,
             "database": env.DB,
@@ -49,7 +61,7 @@ const newUpdateParams = (
 const newDeleteParams = (
     collection: string,
     filter: object
-    ): {[key: string]: any} => {
+    ): DeleteParams => {
         return {
             "collection": collection,
             "database": env.DB,
@@ -57,8 +69,6 @@ const newDeleteParams = (
             "filter": filter
         }
 }
-
-
 
 const newConfig = (
     method: string,

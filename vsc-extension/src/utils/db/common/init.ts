@@ -23,14 +23,14 @@ const initDB = async (collection: string, documents: object[]): Promise<void> =>
         data: data
     };
 
-    console.log(`Inserting ${collection} data to DB...`);
+    console.log(`Inserting ${collection} data to ${collection} DB...`);
     await axios(config)
         .then(function (response) {
-            console.log(`Successfully inserted ${collection} data to DB!`);
+            console.log(`Successfully inserted ${collection} data to ${collection} DB!`);
             console.log(JSON.stringify(response.data));
         })
         .catch(function (error) {
-            console.log(`Failed to insert ${collection} data to DB!`);
+            console.log(`Failed to insert ${collection} data to ${collection}!`);
             console.log(error);
         });
 }
