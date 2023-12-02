@@ -1,9 +1,12 @@
 import * as vscode from "vscode";
 import { getNonce } from "./getNonce";
 import { start } from "./start";
-import { StatsType, calcStats } from "./calcStats";
+import { calcStats } from "./calcStats";
 import { LANGUAGES, isLanguage, languageList } from "./openNote";
 import { PostType, postRequest } from "./apiRequests";
+import { searchBestPokemon } from "./searchBestPokemon";
+import { PokemonType, Stats } from "./types/pokemons";
+import { userName } from "./extension";
 
 const mock: PostType = {
   baseStats: {
@@ -43,16 +46,19 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     webviewView.webview.postMessage({ type: "setup", value: languageList });
 
     let trueAnswer: string;
+    let language: string;
     let imgUrl: string;
+    let bestPokemon: PokemonType;
     webviewView.webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
         case "start": {
-          const language = languageList.find((l) => l === data.value);
-          if (!language || !isLanguage(language)) {
+          const selectedLanguage = languageList.find((l) => l === data.value);
+          if (!selectedLanguage || !isLanguage(selectedLanguage)) {
             vscode.window.showErrorMessage("言語が選択されていません");
             return;
           }
-          const { question } = start(LANGUAGES[language]);
+          language = selectedLanguage;
+          const { question } = await start(LANGUAGES[selectedLanguage]);
           trueAnswer = question.trueAnswer;
           webviewView.webview.postMessage({
             type: "start",
@@ -65,30 +71,55 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
             return;
           }
           if (data.value === trueAnswer) {
-            const stats: StatsType = calcStats();
+            const stats: Stats = calcStats();
+
             const sum =
-              stats.h + stats.a + stats.b + stats.c + stats.d + stats.s;
-            const message = `あなたの種族値は${sum}です\n\nHP:${stats.h}\n 攻撃:${stats.a}\n 防御:${stats.b}\n 特攻:${stats.c}\n 特防:${stats.d}\n すばやさ:${stats.s}`;
+              stats.hp +
+              stats.attack +
+              stats.defense +
+              stats.specialAttack +
+              stats.specialDefense +
+              stats.speed;
+            const message = `あなたの種族値は${sum}です\n\nHP:${stats.hp}\n 攻撃:${stats.attack}\n 防御:${stats.defense}\n 特攻:${stats.specialAttack}\n 特防:${stats.specialDefense}\n すばやさ:${stats.speed}`;
             webviewView.webview.postMessage({
               type: "corrected",
               value: message,
             });
 
             // 種族値特徴の近いポケモンを探索
-            // getPokemon(h, a, b, c, d, s);
-
-            // メトリクスをPOST
-            const res = await postRequest(mock);
-            if (res) {
-              imgUrl = res?.data as string;
-              webviewView.webview.postMessage({
-                type: "fetchedImg",
-                value: imgUrl,
-              });
+            const result = searchBestPokemon(stats);
+            if (!result) {
+              vscode.window.showErrorMessage("ポケモンの検索に失敗しました");
               return;
             } else {
-              vscode.window.showErrorMessage("種族値のPOSTに失敗しました");
-              return;
+              bestPokemon = result;
+              webviewView.webview.postMessage({
+                type: "corrected",
+                value: message + `\n\nあなたは${bestPokemon.name}です`,
+              });
+              // メトリクスをPOST
+              const res = await postRequest({
+                userName,
+                // TODO: 修正されるまでは↓で使用する
+                // userName: "sugiyama",
+                pokemonId: bestPokemon.pokemonId,
+                baseStats: stats,
+                color: {
+                  fillColor: bestPokemon.color.fillColor,
+                  lineColor: bestPokemon.color.lineColor,
+                },
+              });
+              if (res) {
+                imgUrl = (await res?.data) as string;
+                webviewView.webview.postMessage({
+                  type: "fetchedImg",
+                  value: imgUrl,
+                });
+                return;
+              } else {
+                vscode.window.showErrorMessage("グラフの取得に失敗しました");
+                return;
+              }
             }
           } else {
             webviewView.webview.postMessage({
@@ -105,7 +136,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           break;
         }
         case "shareX": {
-          const url = `https://twitter.com/intent/tweet?text=あなたは「python界のガルーラ」です%0a%0a&url=https://github.com/najah7/pokemon-stats-checker&hashtags=エンジニア種族値チェッカー`;
+          const url = `https://twitter.com/intent/tweet?text=あなたは「${language}界の${bestPokemon.name}」です%0a%0a&url=https://github.com/najah7/pokemon-stats-checker&hashtags=エンジニア種族値チェッカー,技育キャンプ`;
           vscode.env.openExternal(vscode.Uri.parse(url));
           break;
         }

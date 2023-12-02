@@ -1,6 +1,7 @@
 import axios, { AxiosResponse, AxiosError } from "axios";
 import * as dotenv from "dotenv";
 import * as path from "path";
+import { Color, Stats } from "./types/pokemons";
 
 dotenv.config({ path: path.join(__dirname, ".env") });
 
@@ -30,18 +31,8 @@ export async function getRequest<T>(
 export type PostType = {
   userName: string;
   pokemonId: number;
-  baseStats: {
-    hp: number;
-    attack: number;
-    defense: number;
-    specialAttack: number;
-    specialDefense: number;
-    speed: number;
-  };
-  color: {
-    fillColor: string;
-    lineColor: string;
-  };
+  baseStats: Stats;
+  color: Color;
 };
 
 export async function postRequest<T>(
