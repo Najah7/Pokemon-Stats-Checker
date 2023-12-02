@@ -49,7 +49,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
             const stats: StatsType = calcStats();
             const sum =
               stats.h + stats.a + stats.b + stats.c + stats.d + stats.s;
-            const message = `h:${stats.h}, a:${stats.a}, b:${stats.b}, c:${stats.c}, d:${stats.d}, s:${stats.s}\nあなたの種族値は${sum}です`;
+            const message = `あなたの種族値は${sum}です\n\nHP:${stats.h}\n 攻撃:${stats.a}\n 防御:${stats.b}\n 特攻:${stats.c}\n 特防:${stats.d}\n すばやさ:${stats.s}`;
             webviewView.webview.postMessage({
               type: "corrected",
               value: message,
@@ -117,27 +117,28 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 				<link href="${styleVSCodeUri}" rel="stylesheet">
 			</head>
       <body>
-        <h1>Base-stats-checker</h1>
         <div class="ui" id="ready">
-          <p>あなたのエンジニア種族値を測ります</p>
-          <p>準備ができたらstartを押してください</p>
+          <h3>あなたのエンジニア種族値を測ります</h3>
+          <p class="desc">準備ができたらstartを押してください</p>
+          <label for="language" class="desc">言語を選択してください</label>
           <select id="language">
           </select>
-          <button id="start">start</button>
+          <button id="start">スタート</button>
         </div>
         <div style="display: none;" class="ui" id="started">
-          <p id="script"></p>
+          <h3 id="script"></h3>
+          <p class="desc">解答記入欄</p>
           <input type="text" id="answer" />
           <p id="error"></p>
           <button id="submit">回答</button>
         </div>
         <div style="display: none;" class="ui" id="corrected">
-          <p>正解!!</p>
+          <h2>正解!!</h2>
           <p id="stats"></p>
         </div>
         <div style="display: none;" class="ui" id="fetchedImg">
-          <p>あなたの種族値</p>
-          <img id="img" />
+          <h3>あなたの種族値</h3>
+          <img id="img"/>
         </div>
         
         <script>
