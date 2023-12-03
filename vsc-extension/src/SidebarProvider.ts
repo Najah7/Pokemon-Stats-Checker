@@ -100,8 +100,6 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               // メトリクスをPOST
               const res = await postRequest({
                 userName,
-                // TODO: 修正されるまでは↓で使用する
-                // userName: "sugiyama",
                 pokemonId: bestPokemon.pokemonId,
                 baseStats: stats,
                 color: {
