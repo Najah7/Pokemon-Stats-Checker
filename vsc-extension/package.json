@@ -2,7 +2,7 @@
   "name": "pokemon-stats-checker",
   "displayName": "pokemon-stats-checker",
   "description": "",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icon": "img/logo@3x.png",
   "repository": {
     "type": "git",
@@ -17,31 +17,31 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onView:base-stats-checker-sidebar-view"
+    "onView:pokemon-stats-checker-sidebar-view"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "base-stats-checker-sidebar-view",
-          "title": "base-stats-checker",
+          "id": "pokemon-stats-checker-sidebar-view",
+          "title": "pokemon-stats-checker",
           "icon": "media/pokemon.svg"
         }
       ]
     },
     "views": {
-      "base-stats-checker-sidebar-view": [
+      "pokemon-stats-checker-sidebar-view": [
         {
           "type": "webview",
-          "id": "base-stats-checker-sidebar",
+          "id": "pokemon-stats-checker-sidebar",
           "name": "Quize",
           "icon": "media/heart.svg",
           "contextualTitle": "Quize"
         },
         {
           "type": "webview",
-          "id": "base-stats-checker-image",
+          "id": "pokemon-stats-checker-image",
           "name": "一度プレイされた方",
           "icon": "media/heart.svg",
           "contextualTitle": "一度プレイされた方"

@@ -11,7 +11,7 @@ export async function getRequest<T>(
   userName: string
 ): Promise<AxiosResponse<T> | null> {
   const url =
-    "https://01q8r9zev4.execute-api.ap-northeast-1.amazonaws.com/prd/graph/mygraph";
+    "https://01q8r9zev4.execute-api.ap-northeast-1.amazonaws.com/prdv2/graph/mygraph";
   try {
     const response = await axios.get<T>(url, {
       params: {

@@ -30,7 +30,7 @@ export class ImageProvider implements vscode.WebviewViewProvider {
         value: "GitHubでログインしてください",
       });
     } else {
-      const res = await getRequest("sugiyama");
+      const res = await getRequest(userName);
       if (res) {
         imgUrl = (await res.data) as string;
         webviewView.webview.postMessage({
