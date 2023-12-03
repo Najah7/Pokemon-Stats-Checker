@@ -39,7 +39,7 @@ export async function postRequest<T>(
   data: PostType
 ): Promise<AxiosResponse<T> | null> {
   const url =
-    "https://01q8r9zev4.execute-api.ap-northeast-1.amazonaws.com/prd/graph/mygraph";
+    "https://01q8r9zev4.execute-api.ap-northeast-1.amazonaws.com/prdv2/graph/mygraph";
   const headers = {
     "x-api-key": apiKey,
   };
