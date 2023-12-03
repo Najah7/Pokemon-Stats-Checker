@@ -7,18 +7,9 @@ import {
 } from "./extension";
 import { f } from "./function";
 import { startTime } from "./start";
-import * as vscode from "vscode";
+import { Stats } from "./types/pokemons";
 
-export type StatsType = {
-  h: number;
-  a: number;
-  b: number;
-  c: number;
-  d: number;
-  s: number;
-};
-
-export const calcStats = (): StatsType => {
+export const calcStats = (): Stats => {
   // Constants for calculations
   const baseHp: number = 300;
   const baseDefense: number = 110;
@@ -55,5 +46,12 @@ export const calcStats = (): StatsType => {
   const s: number = f(baseSpeed - elapsedTime);
 
   // 種族値を返す
-  return { h, a, b, c, d, s };
+  return {
+    hp: h,
+    attack: a,
+    defense: b,
+    specialAttack: c,
+    specialDefense: d,
+    speed: s,
+  };
 };
