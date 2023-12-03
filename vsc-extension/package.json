@@ -1,9 +1,14 @@
 {
-  "name": "base-stats-checker",
-  "displayName": "base-stats-checker",
+  "name": "pokemon-stats-checker",
+  "displayName": "pokemon-stats-checker",
   "description": "",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "img/logo@3x.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Najah7/Pokemon-Stats-Checker"
+  },
+  "publisher": "pokemon-stats-checker",
   "engines": {
     "vscode": "^1.84.0"
   },
