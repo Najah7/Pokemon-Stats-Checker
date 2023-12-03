@@ -31,7 +31,7 @@ export async function activate(context: vscode.ExtensionContext) {
   const sidebarProvider = new SidebarProvider(context.extensionUri);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(
-      "base-stats-checker-sidebar",
+      "pokemon-stats-checker-sidebar",
       sidebarProvider
     )
   );
@@ -40,7 +40,7 @@ export async function activate(context: vscode.ExtensionContext) {
   const imageProvider = new ImageProvider(context.extensionUri);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(
-      "base-stats-checker-image",
+      "pokemon-stats-checker-image",
       imageProvider
     )
   );

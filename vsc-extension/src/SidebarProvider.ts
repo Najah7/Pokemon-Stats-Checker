@@ -100,8 +100,6 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
               // メトリクスをPOST
               const res = await postRequest({
                 userName,
-                // TODO: 修正されるまでは↓で使用する
-                // userName: "sugiyama",
                 pokemonId: bestPokemon.pokemonId,
                 baseStats: stats,
                 color: {
@@ -130,7 +128,15 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           break;
         }
         case "copy": {
-          const code = '<img src="' + imgUrl + '" width="300px" />';
+          const code = `
+            <div>
+              <p>私は${language}界の${bestPokemon.name}です</p>
+              <a href="https://github.com/najah7/pokemon-stats-checker" target="_blank">
+                <img src="${imgUrl}" width="300px" />
+              </a>
+              <p>powered by <a href="https://github.com/najah7/pokemon-stats-checker">エンジニア種族値チェッカー</a></p>
+            </div>
+          `;
           vscode.env.clipboard.writeText(code);
           vscode.window.showInformationMessage(`コピーしました \n ${code}`);
           break;
